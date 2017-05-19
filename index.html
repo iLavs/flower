@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flower style</title>
+
+    <!-- fonts -->
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <!--styles-->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <script src="js/swiper.min.js"></script>
+</head>
+
+<body class="home">
+<div class="wrap">
+    <header class="main-header fixed">
+        <div class="navbar">
+            <button class="burger-btn" id="burger">
+                <i class="burger-icon">burger</i>
+            </button>
+
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-item">
+                        <a href="#" class="header-nav-link">Inspiration</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="#" class="header-nav-link">How to projects</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="Flower style logo">
+                Flower style web site
+            </a>
+
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-item">
+                        <a href="#" class="header-nav-link">Flowers we love</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="#" class="header-nav-link">Shop</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="search-btn" id="searchBtn">
+                <i class="icon-search">Search</i>
+            </button>
+        </div>
+
+        <div class="slide-panel" id="slidePanel">
+            <button class="close-btn" id="slidePanelClose">
+                <i class="icon icon-times">close</i>
+            </button>
+
+            <nav class="main-nav">
+                <ul class="main-nav-list">
+                    <li class="main-nav-item">
+                        <a href="#" class="main-nav-link">Inspiration</a>
+                        <ul class="sub-menu">
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-link">Stylewatch</a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-link">Interviews</a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-link">Filn</a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-link">Art</a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-link">Good Ideas</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="main-nav-item">
+                        <a href="#" class="main-nav-link">News</a>
+                    </li>
+
+                    <li class="main-nav-item">
+                        <a href="#" class="main-nav-link">How-to projects</a>
+                    </li>
+
+                    <li class="main-nav-item">
+                        <a href="#" class="main-nav-link">Flowers we love</a>
+                    </li>
+
+                    <li class="main-nav-item">
+                        <a href="#" class="main-nav-link">Shop</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="slide-panel-footer">
+                <section class="footer-section">
+                    <h4 class="heading text-uppercase">Subscribe</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                </section>
+
+                <section class="footer-section">
+                    <h4 class="heading text-uppercase">Advertise</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                </section>
+
+                <section class="footer-section">
+                    <h4 class="heading text-uppercase">Follow</h4>
+
+                    <ul class="social-list">
+                        <li class="social-list-item">
+                            <a href="#" class="social-list-lin">
+                                <i class="icon icon-"></i>
+                            </a>
+                        </li>
+
+                        <li class="social-list-item">
+                            <a href="#" class="social-list-lin">
+                                <i class="icon icon-"></i>
+                            </a>
+                        </li>
+
+                        <li class="social-list-item">
+                            <a href="#" class="social-list-lin">
+                                <i class="icon icon-"></i>
+                            </a>
+                        </li>
+
+                        <li class="social-list-item">
+                            <a href="#" class="social-list-lin">
+                                <i class="icon icon-"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+        </div>
+
+        <div class="search-bar" id="searchBar">
+            <button class="close-btn" id="searchClose">
+                <i class="icon icon-times"></i>
+            </button>
+
+            <form class="search-form" action="" method="post">
+                <input type="text" placeholder="Search">
+
+                <button type="submit">
+                    Submit
+                    <i class="icon icon arrow-r"></i>
+                </button>
+            </form>
+        </div>
+
+    </header>
+
+    <div class="photo-strip swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="img/1.jpg" alt="">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="img/2.jpg" alt="">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="img/3.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="border-bottom">
+        <div class="content-box container">
+            <div class="post post-lg horizontal post-thumb-left">
+                <article>
+                    <a class="post-thumb" href="#">
+                        <img class="img-fluid" src="img/posts/1.jpg" alt="">
+                    </a>
+
+                    <div class="post-description">
+                        <div class="post-info">
+                            <span>3 Days ago</span> · <span class="date">SEPTEMBER 22, 2017</span>
+                        </div>
+
+                        <header>
+                            <h2 class="heading">
+                                <a href="#" class="h2">
+                                    Melania Hot Glues Orchid for Inauguration Pole Dance
+                                </a>
+                            </h2>
+                        </header>
+
+
+                        <div class="excerpt">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lectus leo, pretium nec
+                                cursus
+                                nec.
+                                mollis a augue. Mauris vel quam nec velit porta vehicula. Praesent velit ipsum,
+                                pellentesque
+                                vel
+                                efficitur vitae, hendrerit et libero Sed mollis augue sit amet luctus lobortis.
+                            </p>
+
+                            <p>Curabitur lacinia pretium tortor, vitae imperdiet nulla tempor eu, hendrerit et libero
+                                Sed
+                                mollis augue sit amet luctus lobortis.
+                            </p>
+                        </div>
+
+                        <a href="#" class="btn-rails">Reed more</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <aside class="get-updates border-bottom">
+        <div class="box d-table">
+            <div class="d-cell description">
+                <h3 class="heading">Never miss a story </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit a dolor quis luctus. Curabitur
+                    laoreet nunc sed orci euismod, eu varius mi blandit. Nulla id tristique metus</p>
+            </div>
+
+            <div class="d-cell">
+                <a href="#" class="btn-rails">Get updates</a>
+            </div>
+        </div>
+    </aside>
+
+    <div class="border-bottom">
+        <div class="content-box container">
+            <div class="post post-lg pull-right">
+                <article>
+                    <a class="post-thumb" href="#">
+                        <img class="img-fluid" src="img/posts/1.jpg" alt="">
+                    </a>
+
+                    <div class="post-description">
+                        <div class="post-info">
+                            <span>3 Days ago</span> · <span class="date">SEPTEMBER 22, 2017</span>
+                        </div>
+
+                        <header>
+                            <h2 class="heading">
+                                <a href="#" class="h2">
+                                    Melania Hot Glues Orchid for Inauguration Pole Dance
+                                </a>
+                            </h2>
+                        </header>
+
+
+                        <div class="excerpt">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lectus leo, pretium nec
+                                cursus
+                                nec.
+                                mollis a augue. Mauris vel quam nec velit porta vehicula. Praesent velit ipsum,
+                                pellentesque
+                                vel
+                                efficitur vitae, hendrerit et libero Sed mollis augue sit amet luctus lobortis.
+                            </p>
+
+                            <p>Curabitur lacinia pretium tortor, vitae imperdiet nulla tempor eu, hendrerit et libero
+                                Sed
+                                mollis augue sit amet luctus lobortis.
+                            </p>
+                        </div>
+
+                        <a href="#" class="btn-rails">Reed more</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="post post-lg">
+                <article>
+                    <a class="post-thumb" href="#">
+                        <img class="img-fluid" src="img/posts/1.jpg" alt="">
+                    </a>
+
+                    <div class="post-description">
+                        <div class="post-info">
+                            <span>3 Days ago</span> · <span class="date">SEPTEMBER 22, 2017</span>
+                        </div>
+
+                        <header>
+                            <h2 class="heading">
+                                <a href="#" class="h2">
+                                    Melania Hot Glues Orchid for Inauguration Pole Dance
+                                </a>
+                            </h2>
+                        </header>
+
+
+                        <div class="excerpt">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lectus leo, pretium nec
+                                cursus
+                                nec.
+                                mollis a augue. Mauris vel quam nec velit porta vehicula. Praesent velit ipsum,
+                                pellentesque
+                                vel
+                                efficitur vitae, hendrerit et libero Sed mollis augue sit amet luctus lobortis.
+                            </p>
+
+                            <p>Curabitur lacinia pretium tortor, vitae imperdiet nulla tempor eu, hendrerit et libero
+                                Sed
+                                mollis augue sit amet luctus lobortis.
+                            </p>
+                        </div>
+
+                        <a href="#" class="btn-rails">Reed more</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Scripts-->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
