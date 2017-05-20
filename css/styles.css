@@ -29,8 +29,8 @@ header, nav, section, article, aside, footer {
 }
 
 select, input, textarea {
-    font: italic 16px arial;
-    color: #e5e5e5;
+    font: 16px 'URWDINSemiCond-Demi';
+    color: #515151;
     vertical-align: middle;
 }
 
@@ -171,12 +171,13 @@ a:hover {
     font-size: 12px;
     text-transform: uppercase;
     font-family: "URWDINSemiCond-Demi";
-    letter-spacing:1px;
+    letter-spacing: 1px;
 }
 
 /*----------------------------------------WRAP--------------------------------------*/
 .wrap {
     padding-top: 94px;
+    overflow: hidden;
 }
 
 .container {
@@ -293,6 +294,10 @@ a:hover {
     left: 0;
     right: 0;
 
+    height: 94px;
+    background: rgba(255, 255, 255, .95);
+    padding: 1rem 0;
+
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
 
@@ -305,6 +310,96 @@ a:hover {
 .main-header .search-bar.active {
     -webkit-transform: translateY(0);
     transform: translateY(0);
+}
+
+.search-wrap {
+    position: relative;
+    max-width: 560px;
+    width: 100%;
+    border-bottom: 3px solid #000;
+    margin: 0 auto;
+    padding-left: 50px;
+}
+
+.search-wrap .icon-search {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+
+    font-size: 1.5rem;
+
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.search-bar .close-btn {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+
+    font-size: 1.25rem;
+    color: #000;
+
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+}
+
+.search-wrap .input-style {
+    display: block;
+    width: 100%;
+}
+
+.search-wrap .search-submit,
+.search-wrap .input-style {
+    height: 54px;
+
+    border: none;
+    background-color: transparent;
+}
+
+.search-wrap .search-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    font: 1rem 'URWDINSemiCond-Demi';
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #515151;
+}
+
+.search-wrap .search-submit {
+    vertical-align: middle;
+}
+
+.search-wrap .icon-right {
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+.search-wrap .input-style::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 1rem;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.search-wrap .input-style::-moz-placeholder { /* Firefox 19+ */
+    font-size: 1rem;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.search-wrap .input-style:-ms-input-placeholder { /* IE 10+ */
+    font-size: 1rem;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.search-wrap .input-style:-moz-placeholder { /* Firefox 18- */
+    font-size: 1rem;
+    text-transform: uppercase;
+    opacity: 1;
 }
 
 .logo {
@@ -544,16 +639,50 @@ a:hover {
     margin-bottom: 3.5rem;
 }
 
-.mixed-posts-box {
-    margin: 0 -3.45%;
+.post-lg.extra {
+    width: 59%;
 }
 
-.mixed-posts-box .post {
-    padding: 0 3.3%;
+.post-lg.extra.pull-left {
+    padding-right: 7.5%;
+    padding-left: 0;
+}
+
+.extra.pull-left + .sm-posts-wrap .post-sm:nth-child(even) {
+    padding-left: 7.5%;
+    padding-right: 0;
+}
+
+.extra.pull-left + .sm-posts-wrap .post-sm:nth-child(odd) {
+    padding-right: 7.5%;
+    padding-left: 0;
+}
+
+.post-lg.extra.pull-right {
+    padding-right:0;
+    padding-left: 7.5%;
+}
+
+.extra.pull-right + .sm-posts-wrap .post-sm:nth-child(odd) {
+    padding-left: 0;
+    padding-right: 7.5%;
+}
+
+.extra.pull-right + .sm-posts-wrap .post-sm:nth-child(even) {
+    padding-right: 0;
+    padding-left: 7.5%;
+}
+
+.sm-posts-wrap .post-sm:nth-child(3n) {
+    clear: both;
 }
 
 .mixed-posts-box .post-sm {
-    width: 22.8%;
+    width: 50%;
+}
+
+.sm-posts-wrap {
+    overflow: hidden;
 }
 
 .post.post-sm .heading {
@@ -563,7 +692,8 @@ a:hover {
 .post.post-sm {
     font-size: 1rem;
 }
-    /*------------------------------------ PHOTO STRIP----------------------------------*/
+
+/*------------------------------------ PHOTO STRIP----------------------------------*/
 
 .photo-strip {
     height: 530px;
@@ -693,4 +823,5 @@ a:hover {
 .ads-block .text-wrap p {
     margin-bottom: 3.375rem;
 }
+
 /*-------------------------------------FOOTER---------------------------------------*/

@@ -46,3 +46,5 @@
 .icon-pint:before { content: '\f0d2'; } /* '' */
 .icon-insta:before { content: '\f16d'; } /* '' */
 .icon-twit:before { content: '\f309'; } /* '' */
+.icon-right:before { content: '\e800'; } /* '' */
+.icon-caret:before { content: '\f004'; } /* '' */

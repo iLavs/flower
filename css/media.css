@@ -1,4 +1,13 @@
-@media all and (max-width: 767px){
-	
+@media all and (max-width: 1600px){
+    .container {
+        max-width: 1200px;
+    }
+}
+
+
+@media all and (max-width: 1350px){
+    .container {
+        max-width: 980px;
+    }
 }
 
