@@ -22,7 +22,7 @@ function togglingSlideNav() {
     });
 }
 
-var mySwiper = new Swiper ('.photo-strip', {
+var mySwiper = new Swiper('.photo-strip', {
     // Optional parameters
     pagination: '.swiper-pagination',
     slidesPerView: 'auto',
@@ -31,6 +31,11 @@ var mySwiper = new Swiper ('.photo-strip', {
     loop: true
 });
 
+function frostedEffect() {
+
+}
+
+
 $(document).ready(function () {
     $('a[href="#"]').click(function (e) {
         e.preventDefault();
@@ -38,5 +43,8 @@ $(document).ready(function () {
 
     togglingSearch();
     togglingSlideNav();
+    frostedEffect();
 
 });
+
+

@@ -20,42 +20,51 @@
 <body class="home">
 <div class="wrap">
     <header class="main-header fixed">
-        <div class="navbar">
-            <button class="burger-btn" id="burger">
-                <i class="burger-icon">burger</i>
-            </button>
+        <div class="navbar d-table">
+            <div class="d-cell">
+                <button class="burger-btn" id="burger"></button>
+            </div>
 
-            <nav class="header-nav">
-                <ul class="header-nav-list">
-                    <li class="header-nav-item">
-                        <a href="#" class="header-nav-link">Inspiration</a>
-                    </li>
-                    <li class="header-nav-item">
-                        <a href="#" class="header-nav-link">How to projects</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="d-cell wide-cell">
+                <nav class="header-nav left">
+                    <ul class="header-nav-list">
+                        <li class="header-nav-item">
+                            <a href="#" class="header-nav-link">Inspiration</a>
+                        </li>
+
+                        <li class="header-nav-item">
+                            <a href="#" class="header-nav-link">How to projects</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
 
             <a href="index.html" class="logo">
-                <img src="img/logo.svg" alt="Flower style logo">
+                <img src="img/logo.png" alt="Flower style logo">
                 Flower style web site
             </a>
 
-            <nav class="header-nav">
-                <ul class="header-nav-list">
-                    <li class="header-nav-item">
-                        <a href="#" class="header-nav-link">Flowers we love</a>
-                    </li>
-                    <li class="header-nav-item">
-                        <a href="#" class="header-nav-link">Shop</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="d-cell wide-cell">
+                <nav class="header-nav right">
+                    <ul class="header-nav-list">
+                        <li class="header-nav-item">
+                            <a href="#" class="header-nav-link">Flowers we love</a>
+                        </li>
 
-            <button class="search-btn" id="searchBtn">
-                <i class="icon-search">Search</i>
-            </button>
+                        <li class="header-nav-item">
+                            <a href="#" class="header-nav-link">Shop</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="d-cell">
+                <button class="search-btn d-cell" id="searchBtn">
+                    <i class="icon-search">Search</i>
+                </button>
+            </div>
         </div>
+
 
         <div class="slide-panel" id="slidePanel">
             <button class="close-btn" id="slidePanelClose">
@@ -70,15 +79,19 @@
                             <li class="sub-menu-item">
                                 <a href="#" class="sub-menu-link">Stylewatch</a>
                             </li>
+
                             <li class="sub-menu-item">
                                 <a href="#" class="sub-menu-link">Interviews</a>
                             </li>
+
                             <li class="sub-menu-item">
                                 <a href="#" class="sub-menu-link">Filn</a>
                             </li>
+
                             <li class="sub-menu-item">
                                 <a href="#" class="sub-menu-link">Art</a>
                             </li>
+
                             <li class="sub-menu-item">
                                 <a href="#" class="sub-menu-link">Good Ideas</a>
                             </li>
@@ -335,6 +348,7 @@
 
 <!--Scripts-->
 <script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/modernizr-custom.js"></script>
 <script src="js/main.js"></script>
 
 </body>
