@@ -23,11 +23,14 @@ function togglingSlideNav() {
 }
 
 var mySwiper = new Swiper('.photo-strip', {
-    // Optional parameters
-    pagination: '.swiper-pagination',
     slidesPerView: 'auto',
     centeredSlides: true,
-    paginationClickable: true,
+    shortSwipes: false,
+    longSwipes: false,
+    simulateTouch: false,
+    speed: 350,
+    nextButton: '.photo-strip-btn.next-btn',
+    prevButton: '.photo-strip-btn.prev-btn',
     loop: true
 });
 
