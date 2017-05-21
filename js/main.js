@@ -22,22 +22,10 @@ function togglingSlideNav() {
     });
 }
 
-var mySwiper = new Swiper('.photo-strip', {
-    slidesPerView: 'auto',
-    centeredSlides: true,
-    shortSwipes: false,
-    longSwipes: false,
-    simulateTouch: false,
-    speed: 350,
-    nextButton: '.photo-strip-btn.next-btn',
-    prevButton: '.photo-strip-btn.prev-btn',
-    loop: true
-});
-
 function viewToggler() {
-    var viewToggler = $('#viewToggler');
-    var togglerLinks = viewToggler.find('.toggler-link');
-    var filterResult = $('#filterResult');
+    var $viewToggler = $('#viewToggler');
+    var togglerLinks = $('#viewToggler .toggler-link');
+    var $filterResult = $('#filterResult');
 
     togglerLinks.click(function (e) {
         e.preventDefault();
@@ -47,15 +35,26 @@ function viewToggler() {
         $(this).parent().addClass('active');
 
         if(className === 'grid-view') {
-            filterResult.removeClass('list-view');
-            filterResult.addClass(className);
+            $filterResult.removeClass('list-view');
+            $filterResult.addClass(className);
         }
         else if (className === 'list-view') {
-            filterResult.removeClass('grid-view');
-            filterResult.addClass(className);
+            $filterResult.removeClass('grid-view');
+            $filterResult.addClass(className);
         }
+    })
+}
+
+function inspirationFiltering() {
+    var $filterNav = $('#inspirationFilter');
+    var filterLinks = $('#inspirationFilter .inspiration-filter-link');
 
 
+    filterLinks.click(function (e) {
+        e.preventDefault();
+
+        filterLinks.parent().removeClass('active');
+        $(this).parent().addClass('active');
     })
 }
 
@@ -69,6 +68,27 @@ $(document).ready(function () {
         e.preventDefault();
     });
 
+    var photoStrip = new Swiper('.photo-strip', {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        shortSwipes: false,
+        longSwipes: false,
+        simulateTouch: false,
+        speed: 350,
+        nextButton: '.photo-strip-btn.next-btn',
+        prevButton: '.photo-strip-btn.prev-btn',
+        loop: true
+    });
+
+    var photosWrap = new Swiper('.photos-wrap', {
+        centeredSlides: true,
+        simulateTouch: false,
+        speed: 350,
+        nextButton: '.photo-strip-btn.next-btn',
+        prevButton: '.photo-strip-btn.prev-btn',
+        loop: true
+    });
+
     togglingSearch();
 
     togglingSlideNav();
@@ -76,6 +96,8 @@ $(document).ready(function () {
     frostedEffect();
 
     viewToggler();
+
+    inspirationFiltering();
 
     $('select').selectric();
 
