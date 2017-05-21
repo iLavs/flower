@@ -70,9 +70,14 @@ $(document).ready(function () {
     });
 
     togglingSearch();
+
     togglingSlideNav();
+
     frostedEffect();
+
     viewToggler();
+
+    $('select').selectric();
 
 });
 

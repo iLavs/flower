@@ -171,14 +171,52 @@ a:hover {
     width: 100%;
 }
 
-.sponsored-label {
-    font-size: 12px;
+.label {
+    font: 12px "URWDINSemiCond-Demi";
     text-transform: uppercase;
-    font-family: "URWDINSemiCond-Demi";
     letter-spacing: 1px;
 }
 
+.custom-select-label {
+    display: block;
+    padding-left: 10px;
+}
+
+.custom-select,
+.selectric .label {
+    border: none;
+    font: 1.25rem/2 "URWDINSemiCond-Demi";
+    letter-spacing: 2px;
+    padding: 5px 0;
+}
+
+.selectric,
+.selectric .button {
+    border: none;
+    background: none;
+}
+
+.selectric-wrapper {
+    display: inline-block;
+    min-width: 150px;
+}
+
+.selectric-items {
+    border: none;
+    background: #fff;
+}
+
+.selectric-items li {
+    font: 1.25rem/2 "URWDINSemiCond-Demi";
+    padding: 5px 10px;
+}
+
+.selectric-items li.selected {
+    background: #f8f8f8;
+}
+
 /*----------------------------------------WRAP--------------------------------------*/
+
 .wrap {
     padding-top: 94px;
     overflow: hidden;
@@ -865,6 +903,7 @@ a:hover {
 .filter-bar-col {
     display: table-cell;
     width: 50%;
+    vertical-align: bottom;
 }
 
 .view-toggler {
@@ -904,8 +943,8 @@ a:hover {
 
     background: #f0f0f0;
 
-    border-top:1px solid #c4c4c4;
-    border-bottom:1px solid #c4c4c4;
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
 }
 
 .list-view .list-row {
@@ -914,7 +953,7 @@ a:hover {
     padding: 1rem 7.5rem 1rem 6.875rem;
     font-size: 1.5rem;
 
-    border-bottom:1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
 }
 
 .filter-result .post-item {
@@ -950,6 +989,7 @@ a:hover {
 }
 
 .list-view a:hover {
+    background: #f3f3f3;
     color: #000;
 }
 
@@ -964,6 +1004,7 @@ a:hover {
 .grid-view {
     overflow: hidden;
     text-align: center;
+    padding: 0 12px;
 }
 
 .grid-view .post-item {
@@ -972,6 +1013,9 @@ a:hover {
     width: 20%;
     padding: 12px;
     margin: 0 -2px;
+
+    -webkit-transition: .6s;
+    transition: .6s;
 }
 
 .grid-view .grid-description {
@@ -979,25 +1023,48 @@ a:hover {
     top: 0;
     left: 0;
     right: 0;
-    bottom:0;
+    bottom: 0;
 
     text-align: center;
-    padding: 2rem;
+    background: rgba(255, 255, 255, .9);
 
-    background: rgba(255,255,255, .9);
+    opacity: 0;
+
+    -webkit-transform: scale(.6);
+    transform: scale(.6);
+
+    -webkit-transition: .35s;
+    transition: .35s;
+
+    z-index: 6;
+}
+
+.grid-view .cell-img:hover .grid-description {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
 .grid-view .grid-description .text-wrap {
-    position: relative;
-    display: inline-block;
+    position: absolute;
     top: 50%;
+    left: 0;
+    right: 0;
+
+    padding: 2rem;
 
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
+.grid-description .title {
+    font: 1.19rem 'Felice-Light';
+    text-transform: uppercase;
+}
+
 .grid-view .post-item img {
     width: 100%;
     height: auto;
+    vertical-align: top;
 }
 
