@@ -34,6 +34,31 @@ var mySwiper = new Swiper('.photo-strip', {
     loop: true
 });
 
+function viewToggler() {
+    var viewToggler = $('#viewToggler');
+    var togglerLinks = viewToggler.find('.toggler-link');
+    var filterResult = $('#filterResult');
+
+    togglerLinks.click(function (e) {
+        e.preventDefault();
+        var className = $(this).data('view');
+
+        togglerLinks.parent().removeClass('active');
+        $(this).parent().addClass('active');
+
+        if(className === 'grid-view') {
+            filterResult.removeClass('list-view');
+            filterResult.addClass(className);
+        }
+        else if (className === 'list-view') {
+            filterResult.removeClass('grid-view');
+            filterResult.addClass(className);
+        }
+
+
+    })
+}
+
 function frostedEffect() {
 
 }
@@ -47,6 +72,7 @@ $(document).ready(function () {
     togglingSearch();
     togglingSlideNav();
     frostedEffect();
+    viewToggler();
 
 });
 

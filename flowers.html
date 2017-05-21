@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flower style | Flowers</title>
+
+    <!-- fonts -->
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <!--styles-->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <script src="js/swiper.min.js"></script>
+</head>
+
+<body class="flower-page">
+<div class="wrap">
+    <header class="main-header fixed">
+        <div class="navbar d-table">
+            <div class="d-cell">
+                <button class="burger-btn" id="burger"></button>
+            </div>
+
+            <div class="d-cell wide-cell">
+                <nav class="header-nav left">
+                    <ul class="header-nav-list">
+                        <li class="header-nav-item">
+                            <a href="#" class="header-nav-link">Inspiration</a>
+                        </li>
+
+                        <li class="header-nav-item">
+                            <a href="#" class="header-nav-link">How to projects</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Flower style logo">
+                Flower style web site
+            </a>
+
+            <div class="d-cell wide-cell">
+                <nav class="header-nav right">
+                    <ul class="header-nav-list">
+                        <li class="header-nav-item">
+                            <a href="flowers.html" class="header-nav-link">Flowers we love</a>
+                        </li>
+
+                        <li class="header-nav-item">
+                            <a href="#" class="header-nav-link">Shop</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="d-cell">
+                <button class="search-btn d-cell" id="searchBtn">
+                    <i class="icon icon-search"></i>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="slide-panel" id="slidePanel">
+            <button class="close-btn lg" id="slidePanelClose">
+                <i class="icon icon-cancel"></i>
+            </button>
+
+            <nav class="main-nav">
+                <ul class="main-nav-list">
+                    <li class="main-nav-item">
+                        <a href="#" class="main-nav-link">Inspiration</a>
+                        <ul class="sub-menu">
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-link">Stylewatch</a>
+                            </li>
+
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-link">Interviews</a>
+                            </li>
+
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-link">Filn</a>
+                            </li>
+
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-link">Art</a>
+                            </li>
+
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-link">Good Ideas</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="main-nav-item">
+                        <a href="#" class="main-nav-link">News</a>
+                    </li>
+
+                    <li class="main-nav-item">
+                        <a href="#" class="main-nav-link">How-to projects</a>
+                    </li>
+
+                    <li class="main-nav-item">
+                        <a href="flowers.html" class="main-nav-link">Flowers we love</a>
+                    </li>
+
+                    <li class="main-nav-item">
+                        <a href="#" class="main-nav-link">Shop</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="slide-panel-footer">
+                <section class="footer-section">
+                    <h4 class="heading text-uppercase">Subscribe</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                </section>
+
+                <section class="footer-section">
+                    <h4 class="heading text-uppercase">Advertise</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                </section>
+
+                <section class="footer-section">
+                    <h4 class="heading text-uppercase">Follow</h4>
+
+                    <ul class="social-list">
+                        <li class="social-list-item">
+                            <a href="#" class="social-list-link">
+                                <i class="icon icon-insta"></i>
+                            </a>
+                        </li>
+
+                        <li class="social-list-item">
+                            <a href="#" class="social-list-link">
+                                <i class="icon icon-fb"></i>
+                            </a>
+                        </li>
+
+                        <li class="social-list-item">
+                            <a href="#" class="social-list-link">
+                                <i class="icon icon-twit"></i>
+                            </a>
+                        </li>
+
+                        <li class="social-list-item">
+                            <a href="#" class="social-list-link">
+                                <i class="icon icon-pint"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+        </div>
+
+        <div class="search-bar" id="searchBar">
+            <button class="close-btn" id="searchClose">
+                <i class="icon icon-cancel"></i>
+            </button>
+
+            <form class="search-wrap search-form" action="" method="post">
+                <i class="icon icon-search"></i>
+
+                <input type="text" class="input-style" placeholder="Search..">
+
+                <button type="submit" class="search-submit">
+                    <span class="text">Submit</span>
+
+                    <i class="icon icon-right"></i>
+                </button>
+            </form>
+        </div>
+
+    </header>
+
+    <div class="content">
+        <div class="filter-bar">
+            <div class="filter-bar-col">
+                <p>Filter by colors: </p>
+
+                <select name="" id="">
+                    <option value="">All colors</option>
+                    <option value="">Red</option>
+                    <option value="">Blue</option>
+                </select>
+            </div>
+
+            <div class="filter-bar-col text-right">
+                <nav class="view-toggler" id="viewToggler">
+                    <ul class="toggler-options-list">
+                        <li class="toggler-option active">
+                            <a class="toggler-link" data-view="grid-view" href="#">Grid view</a>
+                        </li>
+
+                        <li class="toggler-option">
+                            <a class="toggler-link" data-view="list-view" href="#">List view</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="filter-result grid-view" id="filterResult">
+            <div class="list-header list-row">
+                <div class="d-cell cell-img">
+                    Image
+                </div>
+
+                <div class="d-cell cell-cname">
+                    Common name
+                </div>
+
+                <div class="d-cell cell-bname">
+                    Botanical name
+                </div>
+
+                <div class="d-cell cell-season">
+                    Seasonal availability
+                </div>
+            </div>
+
+            <div class="post-item list-row">
+                <div class="d-cell cell-img">
+                    <a href="#">
+                        <img src="img/posts/1.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="d-cell cell-cname">
+                    <a href="#">Agapanthus</a>
+                </div>
+
+                <div class="d-cell cell-bname">
+                    Agapanthus africanus
+                </div>
+
+                <div class="d-cell cell-season">
+                    January - October
+                </div>
+
+                <div class="grid-description">
+                    <h2>Agapanthus</h2>
+                    <p>Agapanthus africanus</p>
+                </div>
+            </div>
+            <div class="post-item list-row">
+                <div class="d-cell cell-img">
+                    <a href="#">
+                        <img src="img/posts/1.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="d-cell cell-cname">
+                    <a href="#">Agapanthus</a>
+                </div>
+
+                <div class="d-cell cell-bname">
+                    Agapanthus africanus
+                </div>
+
+                <div class="d-cell cell-season">
+                    January - October
+                </div>
+
+                <div class="grid-description">
+                    <h2>Agapanthus</h2>
+                    <p>Agapanthus africanus</p>
+                </div>
+            </div>
+            <div class="post-item list-row">
+                <div class="d-cell cell-img">
+                    <a href="#">
+                        <img src="img/posts/1.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="d-cell cell-cname">
+                    <a href="#">Agapanthus</a>
+                </div>
+
+                <div class="d-cell cell-bname">
+                    Agapanthus africanus
+                </div>
+
+                <div class="d-cell cell-season">
+                    January - October
+                </div>
+
+                <div class="grid-description">
+                    <h2>Agapanthus</h2>
+                    <p>Agapanthus africanus</p>
+                </div>
+            </div>
+            <div class="post-item list-row">
+                <div class="d-cell cell-img">
+                    <a href="#">
+                        <img src="img/posts/1.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="d-cell cell-cname">
+                    <a href="#">Agapanthus</a>
+                </div>
+
+                <div class="d-cell cell-bname">
+                    Agapanthus africanus
+                </div>
+
+                <div class="d-cell cell-season">
+                    January - October
+                </div>
+
+                <div class="grid-description">
+                    <h2>Agapanthus</h2>
+                    <p>Agapanthus africanus</p>
+                </div>
+            </div>
+            <div class="post-item list-row">
+                <div class="d-cell cell-img">
+                    <a href="#">
+                        <img src="img/posts/1.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="d-cell cell-cname">
+                    <a href="#">Agapanthus</a>
+                </div>
+
+                <div class="d-cell cell-bname">
+                    Agapanthus africanus
+                </div>
+
+                <div class="d-cell cell-season">
+                    January - October
+                </div>
+
+                <div class="grid-description">
+                    <h2>Agapanthus</h2>
+                    <p>Agapanthus africanus</p>
+                </div>
+            </div>
+            <div class="post-item list-row">
+                <div class="d-cell cell-img">
+                    <a href="#">
+                        <img src="img/posts/1.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="d-cell cell-cname">
+                    <a href="#">Agapanthus</a>
+                </div>
+
+                <div class="d-cell cell-bname">
+                    Agapanthus africanus
+                </div>
+
+                <div class="d-cell cell-season">
+                    January - October
+                </div>
+
+                <div class="grid-description">
+                    <h2>Agapanthus</h2>
+                    <p>Agapanthus africanus</p>
+                </div>
+            </div>
+            <div class="post-item list-row">
+                <div class="d-cell cell-img">
+                    <a href="#">
+                        <img src="img/posts/1.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="d-cell cell-cname">
+                    <a href="#">Agapanthus</a>
+                </div>
+
+                <div class="d-cell cell-bname">
+                    Agapanthus africanus
+                </div>
+
+                <div class="d-cell cell-season">
+                    January - October
+                </div>
+
+                <div class="grid-description">
+                    <h2>Agapanthus</h2>
+                    <p>Agapanthus africanus</p>
+                </div>
+            </div>
+            <div class="post-item list-row">
+                <div class="d-cell cell-img">
+                    <a href="#">
+                        <img src="img/posts/1.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="d-cell cell-cname">
+                    <a href="#">Agapanthus</a>
+                </div>
+
+                <div class="d-cell cell-bname">
+                    Agapanthus africanus
+                </div>
+
+                <div class="d-cell cell-season">
+                    January - October
+                </div>
+
+                <div class="grid-description">
+                    <h2>Agapanthus</h2>
+                    <p>Agapanthus africanus</p>
+                </div>
+            </div>
+            <div class="post-item list-row">
+                <div class="d-cell cell-img">
+                    <a href="#">
+                        <img src="img/posts/1.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="d-cell cell-cname">
+                    <a href="#">Agapanthus</a>
+                </div>
+
+                <div class="d-cell cell-bname">
+                    Agapanthus africanus
+                </div>
+
+                <div class="d-cell cell-season">
+                    January - October
+                </div>
+
+                <div class="grid-description">
+                    <h2>Agapanthus</h2>
+                    <p>Agapanthus africanus</p>
+                </div>
+            </div>
+            <div class="post-item list-row">
+                <div class="d-cell cell-img">
+                    <a href="#">
+                        <img src="img/posts/1.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="d-cell cell-cname">
+                    <a href="#">Agapanthus</a>
+                </div>
+
+                <div class="d-cell cell-bname">
+                    Agapanthus africanus
+                </div>
+
+                <div class="d-cell cell-season">
+                    January - October
+                </div>
+
+                <div class="grid-description">
+                    <h2>Agapanthus</h2>
+                    <p>Agapanthus africanus</p>
+                </div>
+            </div>
+            <div class="post-item list-row">
+                <div class="d-cell cell-img">
+                    <a href="#">
+                        <img src="img/posts/1.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="d-cell cell-cname">
+                    <a href="#">Agapanthus</a>
+                </div>
+
+                <div class="d-cell cell-bname">
+                    Agapanthus africanus
+                </div>
+
+                <div class="d-cell cell-season">
+                    January - October
+                </div>
+
+                <div class="grid-description">
+                    <div class="text-wrap">
+                        <h2>Agapanthus</h2>
+                        <p>Agapanthus africanus</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Scripts-->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/modernizr-custom.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
