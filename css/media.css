@@ -1,13 +1,139 @@
 @media all and (max-width: 1600px){
+    html {
+        font-size: 14px;
+    }
+
     .container {
         max-width: 1200px;
+    }
+
+    .post-lg .heading {
+        font-size: 3.25rem;
+    }
+
+    .post-lg .excerpt {
+        font-size: 1.15rem;
+    }
+
+    .post-lg .excerpt p {
+        margin: 0 0 2.2rem;
+    }
+
+    .ads-block .heading {
+        font-size: 4.1rem;
+    }
+
+    .post .heading {
+        font-size: 1.65rem;
+    }
+
+    .ads-block .text-wrap p {
+        margin-bottom: 3rem;
+    }
+
+    .post-lg .heading {
+        font-size: 2.5rem;
+    }
+
+    .shared-list-item {
+        margin-right: 10px;
+    }
+}
+
+@media all and (max-width: 1440px){
+    .main-header {
+        padding:35px 5.75rem 35px 4.875rem;
+    }
+
+    .header-nav-item {
+        margin: 0 20px;
+    }
+
+    .logo {
+        width: 220px;
+    }
+
+    .container {
+        max-width: 1100px;
     }
 }
 
 
-@media all and (max-width: 1350px){
+@media screen and (max-width: 1366px){
+    .shared-link {
+        font-size: 12px;
+    }
+
+    .shared-link .icon {
+        font-size: 1.25rem;
+        margin-right: 5px;
+    }
+
+    .flower-page .filter-bar {
+        padding:4.688rem 5.5rem 1.563rem 3.875rem;
+    }
+
+    .list-view .cell-cname {
+        width: 18.5%;
+    }
+
+    .list-view .cell-bname {
+        width: 24.5%;
+    }
+
+    .flower-page .filter-bar {
+        padding: 4.688rem 5.5rem 1.563rem 4.5rem;
+    }
+
+    .list-view .list-row {
+        font-size: 1.35rem;
+        padding: 1rem 4.5rem 1rem 4.875rem;
+    }
+}
+
+
+@media screen and (max-width: 1280px){
+    .header-nav-link {
+        font-size: 13px;
+    }
+
+    .header-nav-item{
+        margin: 0 15px;
+    }
+}
+
+@media screen and (max-width: 1160px){
     .container {
-        max-width: 980px;
+        max-width: 900px;
+    }
+
+    .post-lg.horizontal .post-description {
+        padding-right: 0;
+    }
+
+    .post-lg .excerpt {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .post-lg .excerpt p {
+        margin-bottom: 2rem;
+    }
+
+    .content-box {
+        padding: 5rem 0;
+    }
+
+    .shared-list-item {
+        margin-left: 8px;
+    }
+
+    .default-posts-box {
+        margin: 0 -3.25%;
+    }
+
+    .post {
+        padding: 0 3.25%;
     }
 }
 

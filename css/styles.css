@@ -105,7 +105,13 @@ a:hover {
 }
 
 .heading > a {
+    position: relative;
+    display: inline-block;
     color: inherit;
+}
+
+.heading:hover > a {
+    text-decoration: underline;
 }
 
 .text-uppercase {
@@ -118,6 +124,10 @@ a:hover {
 
 .text-left {
     text-align: left;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .btn-rails {
@@ -558,17 +568,17 @@ a:hover {
     line-height: 1.7;
 }
 
-.slide-panel .social-list {
+.social-list {
     display: table;
     padding-top: 6px;
 }
 
-.slide-panel .social-list-item {
+.social-list-item {
     display: table-cell;
     padding-right: 1rem;
 }
 
-.slide-panel .social-list .icon {
+.social-list .icon {
     font-size: 2em;
 }
 
@@ -635,7 +645,7 @@ a:hover {
 }
 
 .post-thumb .shared-box {
-    opacity:0;
+    opacity: 0;
 
     -webkit-transition: .35s;
     transition: .35s;
@@ -1052,6 +1062,7 @@ a:hover {
 
 .grid-view .cell-img:hover .grid-description {
     opacity: 1;
+
     -webkit-transform: scale(1);
     transform: scale(1);
 }
@@ -1062,6 +1073,7 @@ a:hover {
     left: 0;
     right: 0;
 
+    font: italic 1rem 'ACaslonPro';
     padding: 2rem;
 
     -webkit-transform: translateY(-50%);
@@ -1069,7 +1081,7 @@ a:hover {
 }
 
 .grid-description .title {
-    font: 1.19rem 'Felice-Light';
+    font: 1.19rem 'ACaslonPro';
     text-transform: uppercase;
 }
 
@@ -1079,13 +1091,12 @@ a:hover {
     vertical-align: top;
 }
 
-
 /*-------------------------INSPIRATION PAGE---------------------*/
 .inspiration-page .content-box {
     padding-top: 5.5rem;
 }
 
-.inspiration-filter{
+.inspiration-filter {
     padding: 21px 1rem 0;
     text-align: center;
 }
@@ -1122,15 +1133,14 @@ a:hover {
     background: #000;
 }
 
-
 /*-------------SINGLE PAGE // ARTICLE ------------*/
 
 .article {
-    padding: 0 0 4rem;
     overflow: hidden;
 }
 
 .article .photo-strip {
+    height: 590px;
     margin-bottom: 7rem;
 }
 
@@ -1144,7 +1154,7 @@ a:hover {
 }
 
 .article .side-content {
-    width: 36.25%;
+    width: 30.25%;
     float: left;
     text-align: right;
 }
@@ -1152,39 +1162,42 @@ a:hover {
 .article .side-content.quote {
     font: 2rem 'ACaslonPro';
     font-style: italic;
+    padding-top: 1rem;
 }
 
-.article .content-part + .side-content {
+.article .main-col + .side-content {
     clear: both;
 }
 
-.article .content-part {
+.article .main-col {
     font: 1.25rem 'Felice-Light';
-    width: 63.75%;
+    width: 69.75%;
     float: right;
-    padding: 0 2rem 0 2.9rem;
+    padding: 0 2rem 0 6.9rem;
 }
 
-.article .heading {
+.article .article-heading {
     font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
 }
 
-.article .content-part p {
+.article .main-col p {
     margin-bottom: 2.25rem;
-    line-height: 1.5;
+    line-height: 1.55;
 }
 
-.article .content-part strong {
+.article .main-col strong {
     font-family: 'ACaslonPro';
     font-weight: 600;
 }
 
-.article .content-part p:last-child {
+.article .main-col p:last-child {
     margin-bottom: 0;
 }
 
 .article .photos-wrap {
-    padding: 5.3rem 0;
+    padding: 5.8rem 0 5rem;
     overflow: hidden;
     clear: both;
 }
@@ -1193,4 +1206,164 @@ a:hover {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.article .share-box {
+    padding: 3.5rem 0 1.5rem;
+}
+
+.article .share-box .label {
+    font: 1rem 'URWDINSemiCond-Demi';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-right: 3rem;
+}
+
+.article .share-box .label,
+.article .share-box .social-block {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.article .share-box .icon {
+    font-size: 1.5rem;
+}
+
+/*------------------DETAIL PAGE---------------------*/
+.details-page {
+
+}
+
+.detailed-article a {
+    -webkit-transition: .35s;
+    transition: .35s;
+}
+
+.detailed-article a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.detailed-article .header-images {
+    -webkit-box-shadow: 11px 0 20px -4px #a49b9b;
+    -moz-box-shadow: 11px 0 20px -4px #a49b9b;
+    box-shadow: 11px 0 20px -4px #a49b9b;
+
+    margin-bottom: 6.875rem;
+}
+
+.detailed-article .header-images img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.detailed-article .main-heading {
+    font: 3.75rem 'Felice-Light';
+    text-transform: uppercase;
+}
+
+.detailed-article .sub-heading {
+    font: italic 2.5rem 'ACaslonPro';
+}
+
+.detailed-article .article-header {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 5.9rem
+}
+
+.detailed-article .container {
+    overflow: hidden;
+}
+
+.detailed-article .main-col {
+    width: 64.64%;
+    float: left;
+    padding: 0 5.3% 0 9%;
+}
+
+.detailed-article .side-col {
+    width: 36.26%;
+    float: right;
+}
+
+.detailed-article .main-col .section {
+    font-size: 1.25em;
+    margin-bottom: 2.5rem;
+}
+
+.detailed-article .main-col .section-heading {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.detailed-article ul > li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 1rem;
+}
+
+.detailed-article ul > li:before {
+    content: '•';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.detailed-article .images-section .images-wrap {
+    overflow: hidden;
+    margin: 0 -11px;
+}
+
+.detailed-article .images-section .image-item {
+    float: left;
+    width: 33%;
+    padding: 12px 11px;
+
+    -webkit-transition: opacity .35s;
+    transition: opacity .35s;
+}
+
+.detailed-article .images-section .image-item:hover {
+    opacity: .8;
+}
+
+.detailed-article .article-footer {
+    margin-bottom: 6.3rem;
+}
+
+.article-footer {
+    color: #a3a3a3;
+}
+
+.article-footer ul > li {
+    padding-left: 0;
+}
+
+.article-footer ul > li:before {
+    display: none;
+}
+
+.article-footer ul {
+    margin-bottom: 1.25rem;
+    font-size: 13px;
+}
+
+.varieties-block {
+    text-align: center;
+    padding-top: 6.375rem;
+}
+
+.varieties-section {
+    margin-bottom: 7.313rem;
+}
+
+.varieties-block .heading {
+    font-size: 2.625rem;
+    margin-bottom: 2.2rem;
+}
+
+.varieties-block .grid-view .post-item {
+    width: 21.3%;
 }
