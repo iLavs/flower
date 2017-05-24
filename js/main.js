@@ -34,7 +34,7 @@ function viewToggler() {
         togglerLinks.parent().removeClass('active');
         $(this).parent().addClass('active');
 
-        if(className === 'grid-view') {
+        if (className === 'grid-view') {
             $filterResult.removeClass('list-view');
             $filterResult.addClass(className);
         }
@@ -68,6 +68,15 @@ $(document).ready(function () {
         e.preventDefault();
     });
 
+    $(".img-popup-link").tosrus({
+        infinite: true,
+        effect: 'fade',
+        caption: {
+            add: true
+        },
+    });
+
+
     var photoStrip = new Swiper('.photo-strip', {
         slidesPerView: 'auto',
         centeredSlides: true,
@@ -100,6 +109,7 @@ $(document).ready(function () {
     inspirationFiltering();
 
     $('select').selectric();
+
 
 });
 

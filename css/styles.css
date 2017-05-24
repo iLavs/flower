@@ -78,6 +78,13 @@ a:hover {
     height: auto;
 }
 
+.img-responsive {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
 .border-bottom {
     border-bottom: 1px solid #e3e3e3;
 }
@@ -1284,8 +1291,9 @@ a:hover {
 }
 
 .detailed-article .side-col {
-    width: 36.26%;
+    width: 35.26%;
     float: right;
+    padding-right: 3%;
 }
 
 .detailed-article .main-col .section {
@@ -1330,15 +1338,14 @@ a:hover {
 }
 
 .detailed-article .article-footer {
+    font-size: 13px;
     margin-bottom: 6.3rem;
-}
-
-.article-footer {
     color: #a3a3a3;
 }
 
 .article-footer ul > li {
     padding-left: 0;
+    margin: 0;
 }
 
 .article-footer ul > li:before {
@@ -1367,3 +1374,144 @@ a:hover {
 .varieties-block .grid-view .post-item {
     width: 21.3%;
 }
+
+.add-info-section {
+    font-size: 1.25rem;
+    margin-bottom: 2.8rem;
+}
+
+.add-info-section .heading {
+    font: 12px 'URWDINSemiCond-Demi';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #a3a3a3;
+
+    margin-bottom: 10px;
+}
+
+.colors-list {
+    overflow: hidden;
+}
+
+.colors-list .color-item {
+    float: left;
+    margin-right: 8px;
+    padding: 0;
+    border: 2px solid #e3e3e3;
+}
+
+.colors-list .color-item:before {
+    display: none;
+}
+
+.colors-list .color {
+    display: block;
+    width: 44px;
+    height: 44px;
+}
+
+/*POPUP*/
+
+.tos-slider {
+    height: auto;
+}
+
+.tos-desktop .tos-wrapper.tos-fixed.tos-fit.tos-has-close .tos-slide,
+.tos-desktop .tos-wrapper.tos-fixed.tos-fit.tos-has-next .tos-slide,
+.tos-desktop .tos-wrapper.tos-fixed.tos-fit.tos-has-prev .tos-slide {
+    padding: 3.625rem 11.63rem 3.5rem;
+    height: auto;
+}
+
+.tos-slide > img {
+    width: 100%;
+    vertical-align: top;
+    max-height: none;
+}
+
+.tos-close, .tos-next, .tos-prev {
+    opacity: 1;
+}
+
+.tos-desktop .tos-wrapper.tos-fixed {
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow-y: auto;
+    bottom: 0;
+}
+
+.tos-caption {
+    position: relative;
+    padding: 2.813rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    opacity: 1;
+    color: #515151;
+}
+
+.tos-wrapper .tos-caption {
+    height: auto;
+}
+
+.tos-caption > div {
+    font-size: 1.125rem;
+    line-height: 1.5;
+
+    text-shadow: none;
+    white-space: normal;
+    text-overflow: initial;
+}
+
+.tos-close,
+.tos-next,
+.tos-prev {
+    background-color: transparent;
+
+    font: 1rem 'URWDINSemiCond-Demi';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #515151;
+
+    height: auto;
+    width: auto;
+}
+
+.tos-close span,
+.tos-next span,
+.tos-prev span {
+    display: none;
+}
+
+.tos-prev:after {
+    content: 'Previous';
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.tos-next:before {
+    content: 'Next';
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.tos-prev:before {
+    background: url("../img/popup/left-chevron.png") no-repeat center;
+}
+
+.tos-next:after {
+    background: url("../img/popup/right-chevron.png") no-repeat center;
+}
+
+.tos-prev:before,
+.tos-next:after {
+    display: inline-block;
+    content: '';
+    width: 16px;
+    height: 29px;
+
+    vertical-align: middle;
+
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
