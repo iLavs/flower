@@ -89,6 +89,12 @@
         font-size: 1.35rem;
         padding: 1rem 4.5rem 1rem 4.875rem;
     }
+
+
+    .detailed-article .header-images.no-image {
+        font-size: 5rem;
+        padding: 5rem 3rem;
+    }
 }
 
 
@@ -100,9 +106,17 @@
     .header-nav-item{
         margin: 0 15px;
     }
+
+    .header-nav.left {
+        padding-left: 4%;
+    }
 }
 
 @media screen and (max-width: 1160px){
+    .header-nav {
+        display: none !important;
+    }
+
     .container {
         max-width: 900px;
     }
@@ -137,3 +151,8 @@
     }
 }
 
+@media screen and (max-width: 980px){
+    .detailed-article .header-images.no-image {
+        font-size: 3.2rem;
+    }
+}
