@@ -198,12 +198,72 @@ a:hover {
     padding-left: 10px;
 }
 
+.custom-select {
+    position: relative;
+
+    display: inline-block;
+    width: 126px;
+    height: 37px;
+
+    text-overflow: ellipsis;
+
+    margin-left: 10px;
+    padding-right:  12px !important;
+    -webkit-padding-end: 12px !important;
+
+    background: url("../img/down-chevron.png") no-repeat right 0 bottom 5px;
+    -webkit-background-size: 15px 15px;
+    background-size: 15px 15px;
+
+    text-transform: uppercase;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.custom-select::-ms-expand {
+    display: none;
+}
+
+/*Detecting IE +10 fix arrow position for custom select*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .custom-select {
+        background-position: right 0 bottom 10px!important;
+    }
+}
+
 .custom-select,
 .selectric .label {
     border: none;
     font: 1.25rem/2 "URWDINSemiCond-Demi";
     letter-spacing: 2px;
     padding: 5px 0;
+}
+
+.selectric .button:after {
+    border: none;
+}
+
+.selectric .button:before {
+    content: '';
+
+    position: absolute;
+    bottom: 25%;
+    left: 5px;
+
+    display: block;
+    width: 15px;
+    height: 9px;
+
+    background: url("../img/down-chevron.png") center no-repeat;
+
+    -webkit-background-size: 100%;
+    background-size: 100%;
 }
 
 .selectric,
@@ -1258,7 +1318,25 @@ a:hover {
     box-shadow: 11px 0 20px -4px #a49b9b;
 
     margin-bottom: 7.4rem;
+
+    max-height: 585px;
 }
+
+.detailed-article .header-images.no-image {
+    font:6.85rem 'Felice-Light';
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+
+    padding: 4rem 3rem;
+    text-align: center;
+    background: #e8e8e8;
+    color: #a3a3a3;
+}
+
+.detailed-article .header-images.no-image img {
+    display: none!important;
+}
+
 
 .detailed-article .header-images img {
     display: block;
