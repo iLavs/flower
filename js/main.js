@@ -64,7 +64,7 @@ function frostedEffect() {
 
 
 $(document).ready(function () {
-    $('a[href="#"]').click(function (e) {
+    $('a[href="/broken"]').click(function (e) {
         e.preventDefault();
     });
 
