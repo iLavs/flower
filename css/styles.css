@@ -315,6 +315,7 @@ a:hover {
     height: 94px;
     background: rgba(255, 255, 255, .9);
     padding: 35px 7.75rem 35px 6.875rem;
+    border-bottom: 1px solid #c4c4c4;
 }
 
 .main-header.fixed {
