@@ -1292,7 +1292,9 @@ a:hover {
 /*-------------SINGLE PAGE // ARTICLE ------------*/
 
 .article {
+    padding-bottom: 2.5rem;
     overflow: hidden;
+    border-bottom: 1px solid #a3a3a3;
 }
 
 .article .photo-strip {
@@ -1300,13 +1302,60 @@ a:hover {
     margin-bottom: 7rem;
 }
 
+.article .video-block {
+    position: relative;
+
+    height: 590px;
+    text-align: center;
+
+    margin-bottom: 7.813rem;
+    overflow: hidden;
+}
+
+.article .video-wrap {
+    position: relative;
+    display: inline-block;
+    z-index: 5;
+}
+
+.video-backdrop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    width: 50%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    opacity: .3;
+}
+
+.video-backdrop.left {
+    left: 0;
+}
+
+.video-backdrop.right {
+    right: 0;
+}
+
+.article .video-wrap .video {
+    display: block;
+    width: auto;
+    height: 590px;
+}
+
 .article .content-section .container {
     padding-right: 12.5%;
+    padding-left: 1.5%;
     overflow: hidden;
 }
 
 .article .post-info {
-    margin: 1.5rem 0 0;
+    margin: 1rem 0 0;
 }
 
 .article .side-content {
@@ -1329,13 +1378,14 @@ a:hover {
     font: 1.25rem 'Felice-Light';
     width: 69.75%;
     float: right;
-    padding: 0 2rem 0 6.9rem;
+    padding: 0 2rem 0 5.9rem;
 }
 
 .article .article-heading {
     font-size: 4rem;
     line-height: 1.2;
     margin-bottom: 12px;
+    letter-spacing: -1px;
 }
 
 .article .main-col p {
@@ -1354,7 +1404,7 @@ a:hover {
 
 .article .photos-wrap {
     position: relative;
-    padding: 5.8rem 0 5rem;
+    padding: 5.8rem 0 3.5rem;
     overflow: hidden;
     clear: both;
 }
@@ -1381,7 +1431,11 @@ a:hover {
 .swiper-pagination-bullet {
     background: #d6d6d6;
     opacity: 1;
-    margin-left: 10px;
+    margin-left: 17px;
+    margin-top: 9px;
+
+    width: 11px;
+    height: 11px;
 }
 
 .photos-wrap .swiper-pagination-bullet-active {
@@ -1398,17 +1452,26 @@ a:hover {
 .side-content.slider-description {
     font: 1rem 'Felice-Light';
     color: #a9a9a9;
+    padding: 0 0 0 1.5rem;
+    line-height: 1.5;
 }
 
 .article .share-box {
-    padding: 3.5rem 0 1.5rem;
+    padding: 3rem 0 1.5rem;
+
 }
 
 .article .share-box .label {
     font: 1rem 'URWDINSemiCond-Demi';
     text-transform: uppercase;
-    letter-spacing: 2px;
-    padding-right: 3rem;
+    letter-spacing: 3px;
+    margin-left: 3px;
+
+    padding-right: 35px;
+}
+
+.article .share-box .social-list-item {
+    padding-right: 22px;
 }
 
 .article .share-box .label,
@@ -1421,10 +1484,32 @@ a:hover {
     font-size: 1.5rem;
 }
 
-/*------------------DETAIL PAGE---------------------*/
-.details-page {
-
+.article .get-updates {
+    padding-top: 2.5rem;
 }
+
+.article .get-updates .box {
+    padding: 0;
+    margin-left: 0;
+}
+
+.article .get-updates .heading {
+    margin-bottom: 7px;
+}
+
+.article .get-updates .btn-rails {
+    min-width: 190px;
+}
+
+.related-posts .block-heading {
+    text-align: center;
+    padding: 4.5rem 0 0 15px;
+    font-size: 2.2rem;
+
+    margin-bottom: -4rem;
+}
+
+    /*------------------DETAIL PAGE---------------------*/
 
 .detailed-article a {
     -webkit-transition: .35s;
@@ -1642,7 +1727,7 @@ a:hover {
 .tos-desktop .tos-wrapper.tos-fixed.tos-fit.tos-has-close .tos-slide,
 .tos-desktop .tos-wrapper.tos-fixed.tos-fit.tos-has-next .tos-slide,
 .tos-desktop .tos-wrapper.tos-fixed.tos-fit.tos-has-prev .tos-slide {
-    padding: 3.625rem 11.63rem 3.5rem;
+    padding: 3.625rem 12.8rem 2.5rem 10.8rem;
     height: auto;
 }
 
@@ -1692,7 +1777,7 @@ a:hover {
     background-color: transparent;
 
     font: 1rem 'URWDINSemiCond-Demi';
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: #515151;
 
@@ -1702,15 +1787,17 @@ a:hover {
 
 .tos-next, .tos-prev {
     position: relative;
-    top: 2.8rem;
+    top: 3.2rem;
 }
 
 .tos-next {
     float: right;
+    right: 7.65%;
 }
 
 .tos-prev {
     float: left;
+    left: 6%;
 }
 
 .tos-close span,
@@ -1737,7 +1824,7 @@ a:hover {
 }
 
 .tos-next:after {
-    margin-left: 25px;
+    margin-left: 33px;
     background: url("../img/popup/right-chevron.png") no-repeat center;
 }
 

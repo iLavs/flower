@@ -76,6 +76,14 @@ $(document).ready(function () {
         },
     });
 
+    $(".photos-wrap .popup-link").tosrus({
+        infinite: true,
+        effect: 'fade',
+        caption: {
+            add: true
+        },
+    });
+
 
     var photoStrip = new Swiper('.photo-strip', {
         slidesPerView: 'auto',
@@ -84,6 +92,7 @@ $(document).ready(function () {
         longSwipes: false,
         simulateTouch: false,
         speed: 450,
+        spaceBetween: -5,
         nextButton: '.photo-strip-btn.next-btn',
         prevButton: '.photo-strip-btn.prev-btn',
         loop: true
@@ -109,8 +118,6 @@ $(document).ready(function () {
 
             var slideText = $('.photos-wrap .swiper-slide-active a').attr('title');
             $('#sliderDesciption').text(slideText);
-
-
         }
     });
 
