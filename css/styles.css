@@ -114,7 +114,7 @@ a:hover {
 }
 
 .heading:hover > a,
-.heading:focus > a{
+.heading:focus > a {
     text-decoration: underline;
 }
 
@@ -158,9 +158,12 @@ a:hover {
     content: '';
     position: absolute;
     display: block;
-    width: 0;
+    width: 100%;
     height: 2px;
     background: #000;
+
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
 
     -webkit-transition: .35s;
     transition: .35s;
@@ -183,8 +186,9 @@ a:hover {
 .btn-rails:hover:before,
 .btn-rails:hover:after,
 .btn-rails:focus:before,
-.btn-rails:focus:after{
-    width: 100%;
+.btn-rails:focus:after {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 .label {
@@ -208,7 +212,7 @@ a:hover {
     text-overflow: ellipsis;
 
     margin-left: 10px;
-    padding-right:  12px !important;
+    padding-right: 12px !important;
     -webkit-padding-end: 12px !important;
 
     background: url("../img/down-chevron.png") no-repeat right 0 bottom 5px;
@@ -233,7 +237,7 @@ a:hover {
 /*Detecting IE +10 fix arrow position for custom select*/
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .custom-select {
-        background-position: right 0 bottom 10px!important;
+        background-position: right 0 bottom 10px !important;
     }
 }
 
@@ -403,6 +407,14 @@ a:hover {
 .search-btn .icon-search {
     font-size: 1.5rem;
     color: #a3a3a3;
+
+    -webkit-transition: .35s;
+    transition: .35s;
+}
+
+.search-btn .icon-search:hover,
+.search-btn .icon-search:focus {
+    color: #000;
 }
 
 /*-------------------------------------SEARCH BAR---------------------------------------*/
@@ -435,7 +447,6 @@ a:hover {
     position: relative;
     max-width: 560px;
     width: 100%;
-    border-bottom: 3px solid #000;
     margin: 0 auto;
     padding-left: 50px;
 }
@@ -464,17 +475,51 @@ a:hover {
 
 }
 
-.search-wrap .input-style {
-    display: block;
-    width: 100%;
-}
-
 .search-wrap .search-submit,
 .search-wrap .input-style {
     height: 54px;
 
     border: none;
     background-color: transparent;
+}
+
+.search-wrap .input-style {
+    display: block;
+    width: 100%;
+}
+
+.search-wrap .input-style + .border:before,
+.search-wrap .input-style + .border:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.search-wrap .input-style + .border:after {
+    background: #cfcfcf;
+    z-index: 1;
+}
+
+.search-wrap .input-style + .border:before {
+    background: #000;
+
+    -webkit-transition: transform .35s;
+    transition: transform .35s ;
+
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+
+    z-index: 5;
+}
+
+.search-wrap .input-style:focus + .border:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 .search-wrap .search-submit {
@@ -486,6 +531,25 @@ a:hover {
     letter-spacing: 3px;
     text-transform: uppercase;
     color: #515151;
+
+    -webkit-transition: color .35s;
+    transition: color .35s;
+}
+
+.search-wrap .search-submit:hover,
+.search-wrap .search-submit:focus {
+    color: #000;
+}
+
+.search-wrap .search-submit .icon:before {
+    -webkit-transition: .35s;
+    transition: .35s;
+}
+
+.search-wrap .search-submit:hover .icon:before,
+.search-wrap .search-submit:focus .icon:before {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
 }
 
 .search-wrap .search-submit .text {
@@ -746,6 +810,14 @@ a:hover {
     padding-bottom: 10px;
 }
 
+.post-info .days:after {
+    content: '•';
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 6px;
+    vertical-align: middle;
+}
+
 .lg-posts-box {
     margin: 0 -2.525%;
 }
@@ -852,6 +924,7 @@ a:hover {
 /*------------------------------------ PHOTO STRIP----------------------------------*/
 
 .photo-strip {
+    position: relative;
     height: 530px;
 }
 
@@ -886,6 +959,21 @@ a:hover {
 .photo-strip-btn:hover {
     opacity: 1;
     cursor: pointer;
+}
+
+.photo-strip .strip-text{
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+
+    display: inline-block;
+    font: 16px 'Felice-Light';
+    padding: 15px 29px 12px 20px;
+    background: rgba(255,255,255, .65);
+
+    color: #171717;
+
+    z-index: 1000;
 }
 
 .next-btn {
@@ -1265,6 +1353,7 @@ a:hover {
 }
 
 .article .photos-wrap {
+    position: relative;
     padding: 5.8rem 0 5rem;
     overflow: hidden;
     clear: both;
@@ -1274,6 +1363,41 @@ a:hover {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.photos-wrap .pagination-wrap {
+    display: block;
+    padding-top: 5px;
+    overflow: hidden;
+    text-align: right;
+}
+
+.article .photos-wrap .swiper-pagination {
+    position: relative;
+    width: auto;
+    display: inline-block;
+}
+
+.swiper-pagination-bullet {
+    background: #d6d6d6;
+    opacity: 1;
+    margin-left: 10px;
+}
+
+.photos-wrap .swiper-pagination-bullet-active {
+    background: #515151;
+}
+
+.photos-wrap .slide-counter {
+    font: 1rem 'URWDINSemiCond-Demi';
+    color: #515151;
+
+    margin-left: 20px;
+}
+
+.side-content.slider-description {
+    font: 1rem 'Felice-Light';
+    color: #a9a9a9;
 }
 
 .article .share-box {
@@ -1313,9 +1437,9 @@ a:hover {
 }
 
 .detailed-article .header-images {
-    -webkit-box-shadow: 11px 0 20px -4px #a49b9b;
-    -moz-box-shadow: 11px 0 20px -4px #a49b9b;
-    box-shadow: 11px 0 20px -4px #a49b9b;
+    -webkit-box-shadow: 0 0 15px -1px #a49b9b;
+    -moz-box-shadow: 0 0 15px -1px #a49b9b;
+    box-shadow: 0 0 15px -1px #a49b9b;
 
     margin-bottom: 7.4rem;
 
@@ -1323,7 +1447,7 @@ a:hover {
 }
 
 .detailed-article .header-images.no-image {
-    font:6.85rem 'Felice-Light';
+    font: 6.85rem 'Felice-Light';
     letter-spacing: 1rem;
     text-transform: uppercase;
 
@@ -1334,9 +1458,8 @@ a:hover {
 }
 
 .detailed-article .header-images.no-image img {
-    display: none!important;
+    display: none !important;
 }
-
 
 .detailed-article .header-images img {
     display: block;
@@ -1395,7 +1518,7 @@ a:hover {
 
 .detailed-article ul > li {
     position: relative;
-    padding:0 0 0 20px;
+    padding: 0 0 0 20px;
     margin-bottom: .65rem;
 }
 
@@ -1494,11 +1617,14 @@ a:hover {
     float: left;
     margin-right: 8px;
     padding: 0;
-    border: 2px solid #e3e3e3;
 }
 
 .colors-list .color-item:before {
     display: none;
+}
+
+.colors-list .color-item.border .color {
+    border: 2px solid #e3e3e3;
 }
 
 .colors-list .color {
@@ -1538,12 +1664,13 @@ a:hover {
 
 .tos-caption {
     position: relative;
-    padding: 2.813rem;
+    padding: 0 2.8rem 2.8rem;
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
     opacity: 1;
     color: #515151;
+    overflow: hidden;
 }
 
 .tos-wrapper .tos-caption {
@@ -1573,6 +1700,19 @@ a:hover {
     width: auto;
 }
 
+.tos-next, .tos-prev {
+    position: relative;
+    top: 2.8rem;
+}
+
+.tos-next {
+    float: right;
+}
+
+.tos-prev {
+    float: left;
+}
+
 .tos-close span,
 .tos-next span,
 .tos-prev span {
@@ -1592,10 +1732,12 @@ a:hover {
 }
 
 .tos-prev:before {
+    margin-right: 25px;
     background: url("../img/popup/left-chevron.png") no-repeat center;
 }
 
 .tos-next:after {
+    margin-left: 25px;
     background: url("../img/popup/right-chevron.png") no-repeat center;
 }
 
@@ -1603,11 +1745,22 @@ a:hover {
 .tos-next:after {
     display: inline-block;
     content: '';
-    width: 16px;
+    width: 23px;
     height: 29px;
 
     vertical-align: middle;
 
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.tos-close {
+    top: 3rem;
+    right: 3rem;
+    height: 35px;
+    width: 35px;
+
+    background: url(../img/close.svg) no-repeat center;
     -webkit-background-size: 100%;
     background-size: 100%;
 }

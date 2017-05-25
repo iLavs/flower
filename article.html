@@ -253,14 +253,35 @@
                     <div class="photos-wrap">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="img/slide1.jpg" alt="">
+                                <a href="img/slide1.jpg" title="Some caption text could go here, probably shouldn’t
+                                    be in all caps as it could get kind of long explaining
+                                    the images and would become difficult to read.">
+
+                                    <img src="img/slide1.jpg" alt="">
+                                </a>
                             </div>
 
                             <div class="swiper-slide">
-                                <img src="img/slide1.jpg" alt="">
+                                <a href="img/slide1.jpg" title="Some caption text could go here, probably shouldn’t
+                                    be in all caps">
+
+                                    <img src="img/slide1.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="pagination-wrap">
+                            <div class="swiper-pagination"></div>
+
+                            <div class="slide-counter d-iblock">
+                                <span id="activeSlide">0</span> of <span id="allSlides">0</span>
                             </div>
                         </div>
                     </div>
+
+                    <aside class="side-content slider-description" id="sliderDesciption">
+
+                    </aside>
 
                     <div class="main-col">
                         <p>
@@ -971,6 +992,8 @@
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/modernizr-custom.js"></script>
 <script src="js/jquery.selectric.js"></script>
+<script src="js/jquery.tosrus.all.min.js"></script>
+
 
 <script src="js/main.js"></script>
 

@@ -56,6 +56,10 @@
     .container {
         max-width: 1100px;
     }
+
+    .detailed-article .main-col {
+        padding-left: 4%;
+    }
 }
 
 
