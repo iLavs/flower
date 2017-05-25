@@ -684,6 +684,24 @@ a.logo:focus,
     transform: translateX(0);
 }
 
+.slide-panel .main-nav,
+.slide-panel .slide-panel-footer {
+    display: none;
+}
+
+.slide-panel.active .main-nav,
+.slide-panel.active .slide-panel-footer {
+    display: block;
+}
+
+.main-header .search-bar .search-wrap {
+    display: none;
+}
+
+.main-header .search-bar.active .search-wrap {
+    display: block;
+}
+
 .slide-panel .close-btn {
     position: absolute;
     right: 2.5rem;
