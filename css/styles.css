@@ -1282,7 +1282,8 @@ a:hover {
     color: #000;
 }
 
-.active .inspiration-filter-link:after {
+.active .inspiration-filter-link:after,
+.inspiration-filter-link:focus:after{
     content: '';
     position: absolute;
     bottom: 0;
