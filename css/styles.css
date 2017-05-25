@@ -828,8 +828,8 @@ a.logo:focus,
     transition: .35s;
 }
 
-.post-thumb:hover .shared-box,
-.post-thumb:focus .shared-box {
+.post-thumb a:hover + .shared-box,
+.post-thumb a:focus + .shared-box {
     opacity: 1;
 }
 
