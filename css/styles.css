@@ -115,7 +115,7 @@ a:hover {
 
 .heading:hover > a,
 .heading:focus > a {
-    text-decoration: underline;
+    color: #000;
 }
 
 .text-uppercase {
@@ -956,7 +956,8 @@ a:hover {
     z-index: 500;
 }
 
-.photo-strip-btn:hover {
+.photo-strip-btn:hover,
+.photo-strip-btn:focus {
     opacity: 1;
     cursor: pointer;
 }
@@ -1165,7 +1166,8 @@ a:hover {
     display: none;
 }
 
-.list-view a:hover {
+.list-view a:hover,
+.list-view a:focus {
     background: #f3f3f3;
     color: #000;
 }
@@ -1225,7 +1227,8 @@ a:hover {
     /*opacity: 0.4;*/
 /*}*/
 
-.grid-view .cell-img:hover .grid-description {
+.grid-view .cell-img:hover .grid-description,
+.grid-view .cell-img:focus .grid-description{
     opacity: 1;
 
     -webkit-transform: scale(1);
@@ -1281,7 +1284,8 @@ a:hover {
     padding-bottom: 3px;
 }
 
-.inspiration-filter-link:hover {
+.inspiration-filter-link:hover,
+.inspiration-filter-link:focus {
     color: #000;
 }
 
@@ -1589,7 +1593,8 @@ a:hover {
     transition: .35s;
 }
 
-.detailed-article a:hover {
+.detailed-article a:hover,
+.detailed-article a:focus {
     text-decoration: underline;
     color: #000;
 }
@@ -1701,7 +1706,8 @@ a:hover {
     transition: opacity .35s;
 }
 
-.detailed-article .images-section .image-item:hover {
+.detailed-article .images-section .image-item:hover,
+.detailed-article .images-section .image-item:focus {
     opacity: .8;
 }
 
