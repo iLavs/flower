@@ -1568,6 +1568,22 @@ a:hover {
 
     /*------------------DETAIL PAGE---------------------*/
 
+
+.detailes-block-wrap .toggle-btn,
+.varieties-block-wrap .toggle-btn {
+    display: none;
+}
+
+.detailes-block-wrap.hidden .toggle-btn,
+.varieties-block-wrap.hidden  .toggle-btn {
+    display: inline-block !important;
+}
+
+.detailes-block-wrap.hidden .detailed-article,
+.varieties-block-wrap.hidden .varieties-block{
+    display: none;
+}
+
 .detailed-article a {
     -webkit-transition: .35s;
     transition: .35s;
