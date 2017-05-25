@@ -1388,6 +1388,8 @@ a:hover {
     border-radius: 50%;
     border: 2px solid #fff;
 
+    outline: none;
+
     opacity: .75;
 
     -webkit-transition: .35s;
