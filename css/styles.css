@@ -1151,8 +1151,19 @@ a.logo:focus,
 }
 
 .toggler-link {
+    position: relative;
+    display: inline-block;
     font: 1rem 'URWDINCond-Demi';
     text-transform: uppercase;
+}
+
+.toggler-link:hover,
+.toggler-link:focus {
+    color:#000;
+}
+
+.toggler-link:focus {
+    outline: 1px dotted #a3a3a3;
 }
 
 .list-header {
@@ -1263,8 +1274,8 @@ a.logo:focus,
     z-index: 6;
 }
 
-.grid-view .cell-img:hover .grid-description,
-.grid-view .cell-img:focus .grid-description{
+.grid-view .post-item:hover .grid-description,
+.grid-view .post-item:focus .grid-description{
     opacity: 1;
 
     -webkit-transform: scale(1);
