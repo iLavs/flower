@@ -592,6 +592,11 @@ a:hover {
     overflow: hidden;
 }
 
+a.logo:focus,
+.logo a:focus {
+    outline: 1px dotted #a3a3a3;
+}
+
 .main-header .logo {
     position: absolute;
     top: 50%;
@@ -1283,8 +1288,7 @@ a:hover {
     color: #000;
 }
 
-.active .inspiration-filter-link:after,
-.inspiration-filter-link:focus:after{
+.active .inspiration-filter-link:after {
     content: '';
     position: absolute;
     bottom: 0;
