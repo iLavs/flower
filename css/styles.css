@@ -1218,15 +1218,6 @@ a:hover {
     z-index: 6;
 }
 
-/*.wrap {*/
-    /*-webkit-filter: blur(20px);*/
-    /*-moz-filter: blur(20px);*/
-    /*-o-filter: blur(20px);*/
-    /*-ms-filter: blur(20px);*/
-    /*filter: blur(20px);*/
-    /*opacity: 0.4;*/
-/*}*/
-
 .grid-view .cell-img:hover .grid-description,
 .grid-view .cell-img:focus .grid-description{
     opacity: 1;
@@ -1344,7 +1335,13 @@ a:hover {
     -webkit-background-size: cover;
     background-size: cover;
 
-    opacity: .3;
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px);
+
+    opacity: 0.4;
 }
 
 .play-btn {
@@ -1519,7 +1516,15 @@ a:hover {
 
 .article .share-box {
     padding: 3rem 0 1.5rem;
+}
 
+.article .share-box a {
+    color: #b9b9b9;
+}
+
+.article .share-box a:hover,
+.article .share-box a:focus {
+    color: #515151;
 }
 
 .article .share-box .label {
