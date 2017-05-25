@@ -60,6 +60,15 @@
     .detailed-article .main-col {
         padding-left: 4%;
     }
+
+    .article .article-heading{
+        font-size: 3.3rem;
+    }
+
+    .article .side-content.quote {
+        font-size: 1.6rem;
+        padding-top: 10px;
+    }
 }
 
 
@@ -94,10 +103,22 @@
         padding: 1rem 4.5rem 1rem 4.875rem;
     }
 
-
     .detailed-article .header-images.no-image {
         font-size: 5rem;
         padding: 5rem 3rem;
+    }
+
+    .article .content-section .container{
+        padding-right: 1.5%;
+        padding-left: 1.5%;
+    }
+
+    .article .main-col {
+        width: 72.75%;
+    }
+
+    .article .side-content {
+        width: 27.25%;
     }
 }
 

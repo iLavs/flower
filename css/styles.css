@@ -1273,10 +1273,12 @@ a:hover {
     position: relative;
     font: 1.25rem 'Felice-Light';
     padding-bottom: 3px;
+    color: #9e9e9e;
 }
 
 .inspiration-filter-link:hover,
-.inspiration-filter-link:focus {
+.inspiration-filter-link:focus,
+.active .inspiration-filter-link {
     color: #000;
 }
 
@@ -1288,7 +1290,7 @@ a:hover {
 
     display: block;
     width: 100%;
-    height: 1px;
+    height: 2px;
 
     background: #000;
 }
