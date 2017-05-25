@@ -578,6 +578,10 @@ a:hover {
     color: #000;
 }
 
+.search-wrap .search-submit:focus {
+    outline: 1px dotted #a3a3a3;
+}
+
 .search-wrap .search-submit .icon:before {
     -webkit-transition: .35s;
     transition: .35s;
@@ -1336,6 +1340,10 @@ a.logo:focus,
 .inspiration-filter-link:focus,
 .active .inspiration-filter-link {
     color: #000;
+}
+
+.inspiration-filter-link:focus{
+    outline: 1px dotted #a3a3a3;
 }
 
 .active .inspiration-filter-link:after {
