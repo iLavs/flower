@@ -1004,19 +1004,22 @@ a.logo:focus,
     cursor: pointer;
 }
 
-.photo-strip .strip-text{
+.photo-strip .strip-text-wrap{
     position: absolute;
     bottom: 0;
-    left: 50px;
+    left: 0;
+    right: 0;
 
-    display: inline-block;
     font: 16px 'Felice-Light';
-    padding: 15px 29px 12px 20px;
-    background: rgba(255,255,255, .65);
 
     color: #171717;
-
     z-index: 1000;
+}
+
+.photo-strip .strip-text {
+    padding: 15px 29px 12px 20px;
+    background: rgba(255,255,255, .65);
+    display: inline-block;
 }
 
 .next-btn {
