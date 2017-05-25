@@ -1216,6 +1216,15 @@ a:hover {
     z-index: 6;
 }
 
+/*.wrap {*/
+    /*-webkit-filter: blur(20px);*/
+    /*-moz-filter: blur(20px);*/
+    /*-o-filter: blur(20px);*/
+    /*-ms-filter: blur(20px);*/
+    /*filter: blur(20px);*/
+    /*opacity: 0.4;*/
+/*}*/
+
 .grid-view .cell-img:hover .grid-description {
     opacity: 1;
 
@@ -1374,8 +1383,8 @@ a:hover {
     border-width: 15px 0 15px 26px;
     border-color: transparent transparent transparent #fff;
 
-    -webkit-transform: translateX(8px);
-    transform: translateX(8px);
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
 }
 
 .play-btn.show {
