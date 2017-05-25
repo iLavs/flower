@@ -55,7 +55,11 @@ table {
 a {
     color: inherit;
     text-decoration: none;
+}
 
+a, button,
+input[type=submit],
+.btn {
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -148,9 +152,12 @@ a:hover {
     color: inherit;
 }
 
-.heading:hover > a,
-.heading:focus > a {
+.heading > a:hover,
+.heading > a:focus {
     color: #000;
+}
+.heading > a:focus {
+    outline: 1px solid #a3a3a3;
 }
 
 .text-uppercase {
@@ -439,6 +446,15 @@ a:hover {
     transform: translateY(-50%);
 
     border-bottom: 2px solid #a3a3a3;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.burger-btn:hover,
+.burger-btn:focus,
+.burger-btn:hover:before,
+.burger-btn:focus:before {
+    border-color: #000000;
 }
 
 .search-btn .icon-search {
@@ -449,8 +465,8 @@ a:hover {
     transition: .35s;
 }
 
-.search-btn .icon-search:hover,
-.search-btn .icon-search:focus {
+.search-btn:hover .icon-search,
+.search-btn:focus .icon-search {
     color: #000;
 }
 
@@ -509,7 +525,9 @@ a:hover {
 
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-
+}
+.search-bar .close-btn:focus {
+    outline: 1px solid #a3a3a3;
 }
 
 .search-wrap .search-submit,
