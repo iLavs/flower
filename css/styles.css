@@ -1696,7 +1696,7 @@ a.logo:focus,
     display: inline-block !important;
 }
 
-.detailes-block-wrap.hidden .detailed-article,
+.detailes-block-wrap.hidden #articleDetails,
 .varieties-block-wrap.hidden .varieties-block{
     display: none;
 }
@@ -1710,6 +1710,11 @@ a.logo:focus,
 .detailed-article a:focus {
     text-decoration: underline;
     color: #000;
+}
+
+.detailed-article .btn-rails:hover,
+.detailed-article .btn-rails:focus {
+    text-decoration: none;
 }
 
 .detailed-article .header-images {
