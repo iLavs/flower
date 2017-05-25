@@ -21,6 +21,7 @@
 </head>
 
 <body class="single-page">
+
 <div class="wrap">
     <a class="jumpToContent" href="#content">Skip Navigation</a>
 
@@ -189,34 +190,24 @@
 
     <div class="content" id="content">
         <article class="article">
-            <div class="video-block">
-                <div class="video-backdrop left" style="background-image: url(img/poster.jpg);"></div>
-                <div class="video-backdrop right" style="background-image: url(img/poster.jpg);"></div>
+            <div class="photo-strip swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="img/1.jpg" alt="">
+                    </div>
 
-                <div class="video-wrap">
-                    <video class="video" height="590" width="590" autoplay="autoplay" id="video" muted
-                           poster="img/poster.jpg">
-                        <source src="img/video.mp4" type="video/mp4">
-                        Your browser does not support HTML5 video.
-                    </video>
+                    <div class="swiper-slide">
+                        <img src="img/2.jpg" alt="">
+                    </div>
 
-                    <button class="play-btn" id="playBtn">
-                        <span class="triangle"></span>
-                    </button>
-
-                    <script>
-                        document.getElementById('video').addEventListener('ended', function () {
-                            document.getElementById('playBtn').classList.add("show");
-                        });
-
-                        document.getElementById('playBtn').addEventListener('click', function (e) {
-                            e.preventDefault();
-
-                            document.getElementById('video').play();
-                            this.classList.remove("show")
-                        })
-                    </script>
+                    <div class="swiper-slide">
+                        <img src="img/3.jpg" alt="">
+                    </div>
                 </div>
+
+                <div class="prev-btn photo-strip-btn"></div>
+                <div class="next-btn photo-strip-btn"></div>
             </div>
 
             <section class="content-section">
