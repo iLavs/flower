@@ -1334,6 +1334,54 @@ a:hover {
     opacity: .3;
 }
 
+.play-btn {
+    display: none !important;
+    position:  absolute;
+    top: 50%;
+    left: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    width: 190px;
+    height: 190px;
+    background: rgba(0,0,0, .37);
+
+    border-radius: 50%;
+    border: 2px solid #fff;
+
+    opacity: .75;
+
+    -webkit-transition: .35s;
+    transition: .35s;
+
+    z-index: 9;
+}
+
+.play-btn:hover,
+.play-btn:focus {
+    opacity: 1;
+}
+
+.play-btn .triangle {
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 0;
+    height: 0;
+
+    border-style: solid;
+    border-width: 15px 0 15px 26px;
+    border-color: transparent transparent transparent #fff;
+
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+}
+
+.play-btn.show {
+    display: block !important;
+}
+
 .video-backdrop.left {
     left: 0;
 }

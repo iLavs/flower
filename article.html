@@ -216,6 +216,23 @@
                         <source src="img/video.mp4" type="video/mp4">
                         Your browser does not support HTML5 video.
                     </video>
+
+                    <button class="play-btn" id="playBtn">
+                        <span class="triangle"></span>
+                    </button>
+
+                    <script>
+                        document.getElementById('video').addEventListener('ended',function () {
+                            document.getElementById('playBtn').classList.add("show");
+                        });
+
+                        document.getElementById('playBtn').addEventListener('click', function (e) {
+                            e.preventDefault();
+
+                            document.getElementById('video').play();
+                            this.classList.remove("show")
+                        })
+                    </script>
                 </div>
             </div>
 
