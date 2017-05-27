@@ -424,6 +424,10 @@ a:hover {
     outline: none;
 }
 
+.close-btn:focus {
+    outline: 1px dotted #b3b3b3;
+}
+
 .burger-btn {
     position: relative;
 
@@ -650,6 +654,12 @@ a:hover {
     overflow: hidden;
 }
 
+.logo > img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 a.logo:focus,
 .logo a:focus {
     outline: 1px dotted #a3a3a3;
@@ -673,6 +683,10 @@ a.logo:focus,
     font-size: 1.5rem;
 }
 
+.social-list-link:hover,
+.social-list-link:focus{
+    color: #000;
+}
 /*-------------------------------------SLIDE PANEL---------------------------------------*/
 
 .slide-panel {
@@ -737,7 +751,58 @@ a.logo:focus,
 }
 
 .main-nav-link {
+    position: relative;
+    display: inline-block;
     font: 2.25rem 'Felice-Light';
+}
+
+.main-nav-link:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+
+    background: #515151;
+
+    -webkit-transition: .35s;
+    transition: .35s ;
+}
+
+.sub-menu-link{
+    position: relative;
+}
+
+.sub-menu-link:before {
+    position: absolute;
+    left: 0;
+    top: -2px;
+
+    display: inline-block;
+    content: '•';
+    opacity: 0;
+
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+}
+
+.sub-menu-link:focus:before,
+.sub-menu-link:hover:before {
+    opacity: 1;
+}
+
+.main-nav-link:focus,
+.main-nav-link:hover,
+.sub-menu-link:focus,
+.sub-menu-link:hover {
+    color: #000;
+}
+
+.main-nav-link:hover:before,
+.main-nav-link:focus:before {
+    width: 100%;
 }
 
 .main-nav .sub-menu {
@@ -890,6 +955,7 @@ a.logo:focus,
 
 .post-info .border-bottom {
     padding-bottom: 10px;
+    border-color: #a3a3a3;
 }
 
 .post-info .days:after {

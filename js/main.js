@@ -95,7 +95,21 @@ $(document).ready(function () {
         spaceBetween: -5,
         nextButton: '.photo-strip-btn.next-btn',
         prevButton: '.photo-strip-btn.prev-btn',
-        loop: true
+        loop: true,
+        breakpoints: {
+            1160: {
+                simulateTouch: true,
+                shortSwipes: true,
+                longSwipes: true,
+            },
+            767: {
+                calculateHeight:true,
+                slidesPerView: 1,
+                centeredSlides: false,
+                spaceBetween: 0,
+                effect: 'fade'
+            }
+        }
     });
 
     var photosWrap = new Swiper('.photos-wrap', {
