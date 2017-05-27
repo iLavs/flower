@@ -234,6 +234,10 @@ a:hover {
     transform: scaleX(1);
 }
 
+.mob-only {
+    display: none !important;
+}
+
 .label {
     font: 12px "URWDINSemiCond-Demi";
     text-transform: uppercase;
