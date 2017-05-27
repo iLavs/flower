@@ -343,6 +343,7 @@ a:hover {
 .wrap {
     padding: 94px 0 75px;
     overflow: hidden;
+    min-width: 300px;
 }
 
 .container {
@@ -929,8 +930,7 @@ a.logo:focus,
     transition: .35s;
 }
 
-.post-thumb a:hover + .shared-box,
-.post-thumb a:focus + .shared-box {
+.post-thumb:hover .shared-box {
     opacity: 1;
 }
 
@@ -1755,6 +1755,7 @@ a.logo:focus,
 .detailes-block-wrap .toggle-btn,
 .varieties-block-wrap .toggle-btn {
     display: none;
+    margin-bottom: 3rem;
 }
 
 .detailes-block-wrap.hidden .toggle-btn,
