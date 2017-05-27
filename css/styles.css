@@ -152,11 +152,11 @@ a:hover {
     color: inherit;
 }
 
-.heading > a:hover,
-.heading > a:focus {
+.heading a:hover,
+.heading a:focus {
     color: #000;
 }
-.heading > a:focus {
+.heading a:focus {
     outline: 1px solid #a3a3a3;
 }
 
@@ -1418,7 +1418,7 @@ a.logo:focus,
 }
 
 .inspiration-filter {
-    padding: 21px 1rem 0;
+    padding: 35px 1rem 18px;
     text-align: center;
 }
 
@@ -1428,7 +1428,7 @@ a.logo:focus,
 
 .inspiration-filter-item {
     float: left;
-    margin: 0 12px;
+    margin: 0 15px;
 }
 
 .inspiration-filter-link {
@@ -1451,7 +1451,7 @@ a.logo:focus,
 .active .inspiration-filter-link:after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -6px;
     left: 0;
 
     display: block;
