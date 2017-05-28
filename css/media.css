@@ -835,10 +835,17 @@
         -webkit-transition: .4s;
         transition: .4s;
     }
+    .shared-link {
+        color: #b8b8b7;
+    }
 
     .photo-strip .shared-list-item:focus,
     .photo-strip .shared-list-item:hover {
         background: rgba(0, 0, 0, .7);
+    }
+    .photo-strip .shared-list-item:focus .shared-link,
+    .photo-strip .shared-list-item:hover .shared-link {
+        color: #ffffff;
     }
 
     .photo-strip .shared-list-item .icon{
