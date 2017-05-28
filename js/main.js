@@ -58,9 +58,44 @@ function inspirationFiltering() {
     })
 }
 
+function articleSlider() {
+    if ($('.photos-wrap').length > 0) {
+        $(".photos-wrap .popup-link").tosrus({
+            infinite: true,
+            effect: 'fade',
+            caption: {
+                add: true
+            },
+        });
+
+        var photosWrap = new Swiper('.photos-wrap', {
+            speed: 450,
+            nextButton: '.photo-strip-btn.next-btn',
+            prevButton: '.photo-strip-btn.prev-btn',
+            loop: true,
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            onSlideChangeStart: function () {
+                var counter = $('slideCounter');
+                var index = $('.photos-wrap .swiper-pagination-bullet').index($('.swiper-pagination-bullet-active'));
+
+                $('#activeSlide').html(index + 1);
+
+                //#Remove all slides index insert if you hadnle it by PHP
+                $('#allSlides').html(
+                    $('.photos-wrap .swiper-pagination-bullet').length
+                );
+
+                var slideText = $('.photos-wrap .swiper-slide-active a').attr('title');
+                $('#sliderDesciption').text(slideText);
+            }
+        });
+    }
+}
+
 
 function photoStripFunction() {
-    if ($('.photo-strip')) {
+    if ($('.photo-strip').length > 0) {
         var mobSettings = {
             slidesPerView: 1,
             shortSwipes: true,
@@ -133,9 +168,6 @@ function photoStripFunction() {
     }
 }
 
-function frostedEffect() {
-
-}
 
 
 $(document).ready(function () {
@@ -152,44 +184,13 @@ $(document).ready(function () {
         },
     });
 
-    $(".photos-wrap .popup-link").tosrus({
-        infinite: true,
-        effect: 'fade',
-        caption: {
-            add: true
-        },
-    });
-
-    var photosWrap = new Swiper('.photos-wrap', {
-        speed: 450,
-        nextButton: '.photo-strip-btn.next-btn',
-        prevButton: '.photo-strip-btn.prev-btn',
-        loop: true,
-        pagination: '.swiper-pagination',
-        paginationClickable: true,
-        onSlideChangeStart: function () {
-            var counter = $('slideCounter');
-            var index = $('.photos-wrap .swiper-pagination-bullet').index($('.swiper-pagination-bullet-active'));
-
-            $('#activeSlide').html(index + 1);
-
-            //#Remove all slides index insert if you hadnle it by PHP
-            $('#allSlides').html(
-                $('.photos-wrap .swiper-pagination-bullet').length
-            );
-
-            var slideText = $('.photos-wrap .swiper-slide-active a').attr('title');
-            $('#sliderDesciption').text(slideText);
-        }
-    });
-
     photoStripFunction();
 
     togglingSearch();
 
     togglingSlideNav();
 
-    frostedEffect();
+    articleSlider();
 
     viewToggler();
 
