@@ -228,6 +228,7 @@
                             function autoplay() {
                                 if (window.innerWidth <= 767) {
                                     video.pause();
+                                    document.getElementById('playBtn').classList.add("show");
                                 }
                                 else {
                                     video.play();
