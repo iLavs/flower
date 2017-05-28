@@ -654,15 +654,12 @@ a:hover {
 }
 
 .logo {
-    height: 18px;
-    width: 253px;
+    font: 26px/1 'Felice-Light';
+    text-transform: uppercase;
+    letter-spacing: 6.5px;
+    color: #171717;
+    width: 264px;
     overflow: hidden;
-}
-
-.logo > img{
-    display: block;
-    width: 100%;
-    height: auto;
 }
 
 a.logo:focus,
@@ -679,10 +676,6 @@ a.logo:focus,
     transform: translate(-50%, -50%);
 }
 
-.main-header .logo > img {
-    width: 100%;
-    height: auto;
-}
 
 .close-btn.lg {
     font-size: 1.5rem;

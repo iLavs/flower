@@ -82,17 +82,17 @@
                 </nav>
 
                 <div class="slide-panel-footer">
-                    <div class="footer-section">
+                    <section class="footer-section">
                         <div class="heading text-uppercase">Subscribe</div>
                         <p>Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
+                    </section>
 
-                    <div class="footer-section">
+                    <section class="footer-section">
                         <div class="heading text-uppercase">Advertise</div>
                         <p>Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
+                    </section>
 
-                    <div class="footer-section">
+                    <section class="footer-section">
                         <div class="heading text-uppercase">Follow</div>
 
                         <ul class="social-list">
@@ -120,7 +120,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </section>
 
                 </div>
             </div>
@@ -140,8 +140,7 @@
             </div>
 
             <a href="index.html" class="logo">
-                <img src="img/logo.png" alt="Flower style logo">
-                Flower style web site
+                Flower Style
             </a>
 
             <div class="d-cell wide-cell">
@@ -243,10 +242,11 @@
                             function autoplay() {
                                 if (window.innerWidth <= 767) {
                                     video.pause();
-                                    document.getElementById('playBtn').classList.add("show");
+                                    playBtn.classList.add("show");
                                 }
                                 else {
                                     video.play();
+                                    playBtn.classList.remove("show");
                                 }
                             }
 

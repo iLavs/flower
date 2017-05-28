@@ -73,7 +73,9 @@
     }
 
     .logo {
-        width: 220px;
+        width: 229px;
+        font-size: 22px;
+        letter-spacing: 6px;
     }
 
     .container {
@@ -490,8 +492,9 @@
     }
 
     .logo {
-        width: 160px;
-        height: 13px;
+        font-size: 17px;
+        width: auto;
+        text-align: center;
     }
 
     .burger-btn {

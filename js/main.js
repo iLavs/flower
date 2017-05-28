@@ -120,7 +120,6 @@ function photoStripFunction() {
             loop: true,
             breakpoints: {
                 1160: {
-                    slidesPerView: 'auto',
                     simulateTouch: true,
                     shortSwipes: true,
                     longSwipes: true,
@@ -144,7 +143,6 @@ function photoStripFunction() {
                 var ww = $(window).width();
 
                 if (ww <= 767) {
-                    console.log(photoStrip);
                     photoStrip.destroy(true, true);
 
                     setTimeout(function () {
@@ -152,8 +150,6 @@ function photoStripFunction() {
                     }, 200);
                 }
                 else {
-                    console.log(photoStrip);
-
                     photoStrip.destroy(true, true);
 
                     setTimeout(function () {
