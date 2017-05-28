@@ -134,7 +134,6 @@ function photoStripFunction() {
         });
 
         var photoStrip = new Swiper('.photo-strip', photoStripSettings);
-        photoStrip.params.initStrip = true;
 
         $(window).resize(function () {
             clearTimeout(window.resizedFinished);
@@ -146,6 +145,7 @@ function photoStripFunction() {
                     photoStrip.destroy(true, true);
 
                     setTimeout(function () {
+                        console.log(photoStrip);
                         photoStrip = new Swiper('.photo-strip', mobSettings);
                     }, 200);
                 }

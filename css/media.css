@@ -620,6 +620,7 @@
     }
 
     .article .post-info {
+        margin: 1rem 0 35px;
         text-align: left;
     }
 
@@ -764,6 +765,10 @@
     .article .main-col,
     .article .side-content {
         width: 100%;
+    }
+
+    .article .main-col {
+        padding: 0 2rem 0 3.9rem;
     }
 
     .article .side-content.quote {
@@ -982,11 +987,6 @@
 
     .article .main-col p {
         font-size: 15px;
-    }
-
-    .article .post-info {
-        margin: 1rem 0 35px;
-        text-align: left;
     }
 
     .article .article-heading {
