@@ -1334,6 +1334,7 @@ a.logo:focus,
 .list-view .cell-img img {
     width: 52px;
     height: auto;
+    vertical-align: middle;
 }
 
 .list-view .cell-cname {
