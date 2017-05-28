@@ -880,6 +880,12 @@
         bottom:0;
         right: 0;
 
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+
+        -webkit-transition: .35s;
+        transition: .35s ;
+
         max-height:100%;
         overflow: auto;
         background: rgba(255, 255, 255, .9);
@@ -887,10 +893,16 @@
         z-index: 9999;
     }
 
+    .video-popup.active {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
     .video-popup .close-btn {
         position: absolute;
         top: 16px;
         right: 14px;
+        z-index: 100;
     }
 
     .video-popup .video-wrap {
@@ -902,6 +914,11 @@
         width: 100%;
         max-width: none;
         height: auto;
+    }
+
+    .play-btn {
+        width: 80px;
+        height: 80px;
     }
 }
 

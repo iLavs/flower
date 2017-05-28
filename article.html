@@ -192,12 +192,12 @@
                 <div class="video-backdrop left" style="background-image: url(img/poster.jpg);"></div>
                 <div class="video-backdrop right" style="background-image: url(img/poster.jpg);"></div>
 
-                    <div class="video-gif mob-only">
+                    <div class="video-gif mob-only" id="popupToggle">
                         <img src="img/video.gif" alt="Video gif alternative">
                     </div>
 
                 <div class="video-popup" id="popup">
-                    <button class="close-btn lg">
+                    <button class="close-btn lg mob-only" id="closeVideo">
                         <i class="icon icon-cancel"></i>
                     </button>
 
@@ -214,16 +214,31 @@
 
                         <script>
                             var video = document.getElementById('video');
+                            var playBtn = document.getElementById('playBtn');
+
                             video.addEventListener('ended', function () {
                                 document.getElementById('playBtn').classList.add("show");
                             });
 
-                            document.getElementById('playBtn').addEventListener('click', function (e) {
+                            playBtn.addEventListener('click', function (e) {
                                 e.preventDefault();
-
                                 video.play();
-                                this.classList.remove("show")
+                                this.classList.remove("show");
                             });
+
+                            document.getElementById('closeVideo').addEventListener('click', function (e) {
+                                e.preventDefault();
+                                video.pause();
+                                document.getElementById('popup').classList.remove("active");
+                            });
+
+                            document.getElementById('popupToggle').addEventListener('click', function (e) {
+                                e.preventDefault();
+                                document.getElementById('popup').classList.add("active");
+                                playBtn.classList.add("show");
+                            });
+
+
 
                             function autoplay() {
                                 if (window.innerWidth <= 767) {

@@ -60,75 +60,77 @@ function inspirationFiltering() {
 
 
 function photoStripFunction() {
-    var mobSettings = {
-        slidesPerView: 1,
-        shortSwipes: true,
-        longSwipes: true,
-        centeredSlides: true,
-        effect: 'fade',
-        nextButton: '.photo-strip-btn.next-btn',
-        prevButton: '.photo-strip-btn.prev-btn',
-        loop: true
-    };
+    if ($('.photo-strip')) {
+        var mobSettings = {
+            slidesPerView: 1,
+            shortSwipes: true,
+            longSwipes: true,
+            centeredSlides: true,
+            effect: 'fade',
+            nextButton: '.photo-strip-btn.next-btn',
+            prevButton: '.photo-strip-btn.prev-btn',
+            loop: true
+        };
 
-    var photoStripSettings = {
-        slidesPerView: 'auto',
-        shortSwipes: false,
-        longSwipes: false,
-        simulateTouch: false,
-        freeMode: true,
-        speed: 450,
-        spaceBetween: 0,
-        nextButton: '.photo-strip-btn.next-btn',
-        prevButton: '.photo-strip-btn.prev-btn',
-        loop: true,
-        breakpoints: {
-            1160: {
-                slidesPerView: 'auto',
-                simulateTouch: true,
-                shortSwipes: true,
-                longSwipes: true,
+        var photoStripSettings = {
+            slidesPerView: 'auto',
+            shortSwipes: false,
+            longSwipes: false,
+            simulateTouch: false,
+            freeMode: true,
+            speed: 450,
+            spaceBetween: 0,
+            nextButton: '.photo-strip-btn.next-btn',
+            prevButton: '.photo-strip-btn.prev-btn',
+            loop: true,
+            breakpoints: {
+                1160: {
+                    slidesPerView: 'auto',
+                    simulateTouch: true,
+                    shortSwipes: true,
+                    longSwipes: true,
+                }
             }
-        }
-    };
+        };
 
-    var photoStripSlides = $('.photo-strip .swiper-slide').clone();
+        var photoStripSlides = $('.photo-strip .swiper-slide').clone();
 
-    photoStripSlides.each(function (i) {
-        $('.photo-strip .swiper-wrapper').append(photoStripSlides[i]);
-    });
+        photoStripSlides.each(function (i) {
+            $('.photo-strip .swiper-wrapper').append(photoStripSlides[i]);
+        });
 
-    var photoStrip = new Swiper('.photo-strip', photoStripSettings);
+        var photoStrip = new Swiper('.photo-strip', photoStripSettings);
+        photoStrip.params.initStrip = true;
 
-    $(window).resize(function () {
-        clearTimeout(window.resizedFinished);
+        $(window).resize(function () {
+            clearTimeout(window.resizedFinished);
 
-        window.resizedFinished = setTimeout(function () {
-            var ww = $(window).width();
+            window.resizedFinished = setTimeout(function () {
+                var ww = $(window).width();
 
+                if (ww <= 767) {
+                    console.log(photoStrip);
+                    photoStrip.destroy(true, true);
 
-            if (ww <= 767) {
-                console.log(photoStrip);
-                photoStrip.destroy(true, true);
+                    setTimeout(function () {
+                        photoStrip = new Swiper('.photo-strip', mobSettings);
+                    }, 200);
+                }
+                else {
+                    console.log(photoStrip);
 
-                setTimeout(function () {
-                    photoStrip = new Swiper('.photo-strip', mobSettings);
-                }, 200);
-            }
-            else {
-                console.log(photoStrip);
+                    photoStrip.destroy(true, true);
 
-                photoStrip.destroy(true, true);
+                    setTimeout(function () {
+                        photoStrip = new Swiper('.photo-strip', photoStripSettings);
+                        photoStrip.setWrapperTranslate('auto');
+                    }, 200);
+                }
+            }, 100);
+        });
 
-                setTimeout(function () {
-                    photoStrip = new Swiper('.photo-strip', photoStripSettings);
-                    photoStrip.setWrapperTranslate('auto');
-                }, 200);
-            }
-        }, 100);
-    });
-
-    $(window).trigger('resize');
+        $(window).trigger('resize');
+    }
 }
 
 function frostedEffect() {
