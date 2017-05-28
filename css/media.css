@@ -527,6 +527,21 @@
         letter-spacing: 3px;
     }
 
+    .photo-strip {
+        padding-top: 100%;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .photo-strip .swiper-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom:0;
+    }
+
     .photo-strip .strip-text-wrap {
         display: none;
     }

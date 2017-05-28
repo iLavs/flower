@@ -85,7 +85,6 @@ $(document).ready(function () {
     });
 
     var mobSettings = {
-        calculateHeight: true,
         slidesPerView: 1,
         shortSwipes: true,
         longSwipes: true,
@@ -145,6 +144,8 @@ $(document).ready(function () {
         }, 100);
     });
 
+    $(window).trigger('resize');
+
 
     var photosWrap = new Swiper('.photos-wrap', {
         speed: 450,
@@ -180,7 +181,6 @@ $(document).ready(function () {
     inspirationFiltering();
 
     $('select').selectric();
-
 
 });
 
