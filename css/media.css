@@ -616,6 +616,10 @@
         margin: 0 0 15px;
     }
 
+    .article .post-info {
+        text-align: left;
+    }
+
     .post .post-description .heading {
         font-size: 25px;
     }
