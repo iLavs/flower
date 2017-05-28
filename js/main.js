@@ -144,6 +144,7 @@ $(document).ready(function () {
     $(".img-popup-link").tosrus({
         infinite: true,
         effect: 'fade',
+        drag: true,
         caption: {
             add: true
         },

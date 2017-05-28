@@ -192,33 +192,56 @@
                 <div class="video-backdrop left" style="background-image: url(img/poster.jpg);"></div>
                 <div class="video-backdrop right" style="background-image: url(img/poster.jpg);"></div>
 
-                <div class="video-gif">
-                    <img src="img/video.gif" alt="Video gif alternative">
-                </div>
+                    <div class="video-gif mob-only">
+                        <img src="img/video.gif" alt="Video gif alternative">
+                    </div>
 
-                <div class="video-wrap">
-                    <video class="video" height="590" width="590" autoplay="autoplay" id="video" muted
-                           poster="img/poster.jpg">
-                        <source src="img/video.mp4" type="video/mp4">
-                        Your browser does not support HTML5 video.
-                    </video>
-
-                    <button class="play-btn" id="playBtn">
-                        <span class="triangle"></span>
+                <div class="video-popup" id="popup">
+                    <button class="close-btn lg">
+                        <i class="icon icon-cancel"></i>
                     </button>
 
-                    <script>
-                        document.getElementById('video').addEventListener('ended', function () {
-                            document.getElementById('playBtn').classList.add("show");
-                        });
+                    <div class="video-wrap">
+                        <video class="video" height="590" width="590" autoplay="autoplay" id="video" muted
+                               poster="img/poster.jpg">
+                            <source src="img/video.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
 
-                        document.getElementById('playBtn').addEventListener('click', function (e) {
-                            e.preventDefault();
+                        <button class="play-btn" id="playBtn">
+                            <span class="triangle"></span>
+                        </button>
 
-                            document.getElementById('video').play();
-                            this.classList.remove("show")
-                        })
-                    </script>
+                        <script>
+                            var video = document.getElementById('video');
+                            video.addEventListener('ended', function () {
+                                document.getElementById('playBtn').classList.add("show");
+                            });
+
+                            document.getElementById('playBtn').addEventListener('click', function (e) {
+                                e.preventDefault();
+
+                                video.play();
+                                this.classList.remove("show")
+                            });
+
+                            function autoplay() {
+                                if (window.innerWidth <= 767) {
+                                    video.pause();
+                                }
+                                else {
+                                    video.play();
+                                }
+                            }
+
+                            autoplay();
+
+                            window.addEventListener('resize', function () {
+                                autoplay();
+                            });
+
+                        </script>
+                    </div>
                 </div>
             </div>
 
@@ -663,6 +686,7 @@
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/swiper.min.js"></script>
 <script src="js/jquery.selectric.js"></script>
+<script src="js/hammer-time.min.js"></script>
 <script src="js/jquery.tosrus.all.min.js"></script>
 
 
