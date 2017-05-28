@@ -946,16 +946,6 @@ a.logo:focus,
 .post-thumb  .shared-link:focus {
     opacity: 1;
 }
-    /*.post-thumb .shared-box {*/
-    /*opacity: 0;*/
-
-    /*-webkit-transition: .35s;*/
-    /*transition: .35s;*/
-/*}*/
-
-/*.post-thumb:hover .shared-box {*/
-    /*opacity: 1;*/
-/*}*/
 
 .post-thumb-left .post-thumb {
     float: left;
@@ -1497,14 +1487,25 @@ a.logo:focus,
     margin-bottom: 7rem;
 }
 
-.article .video-block {
+.article .video-block,
+.video-gif {
     position: relative;
 
-    height: 590px;
+    max-height: 590px;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+
     text-align: center;
 
     margin-bottom: 7.813rem;
     overflow: hidden;
+}
+
+.video-gif img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .article .video-wrap {
