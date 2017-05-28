@@ -182,12 +182,12 @@ a:hover {
 
     font: 1rem 'URWDINSemiCond-Demi';
     line-height: 1;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     color: #a3a3a3;
 
     vertical-align: bottom;
-    padding: 1.1rem;
+    padding: 1.2rem 1.4rem;
     border-top: 1px solid #a3a3a3;
     border-bottom: 1px solid #a3a3a3;
 
@@ -362,7 +362,7 @@ a:hover {
     display: block;
     height: 94px;
     background: rgba(255, 255, 255, .9);
-    padding: 35px 7.75rem 35px 6.875rem;
+    padding: 32px 6.7rem 35px 6.875rem;
     border-bottom: 1px solid #c4c4c4;
 }
 
@@ -437,7 +437,7 @@ a:hover {
     position: relative;
 
     width: 26px;
-    height: 20px;
+    height: 16px;
 
     border-bottom: 2px solid #a3a3a3;
     border-top: 2px solid #a3a3a3;
@@ -871,7 +871,7 @@ a.logo:focus,
 
 /*-------------------------------------CONTENT--------------------------------------*/
 .content-box {
-    padding: 7.3rem 0 7.9rem;
+    padding: 7.45rem 0 7.9rem;
     overflow: hidden;
 }
 
@@ -928,7 +928,7 @@ a.logo:focus,
     position: relative;
     display: block;
     width: 100%;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -958,17 +958,21 @@ a.logo:focus,
 .post-info {
     width: 100%;
     font: 12px 'URWDINSemiCond-Demi';
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     color: #a3a3a3;
 
-    margin-bottom: .5rem;
+    margin-bottom: .7rem;
     overflow: hidden;
 }
 
 .post-info .border-bottom {
-    padding-bottom: 10px;
+    padding-bottom: 9px;
     border-color: #a3a3a3;
+}
+
+.post-sm .post-info .border-bottom {
+    padding-bottom: 5px;
 }
 
 .post-info .days:after {
@@ -1007,7 +1011,7 @@ a.logo:focus,
 
 .post-lg .heading {
     font-size: 3.75rem;
-    line-height: 1.4;
+    line-height: 1.15;
     letter-spacing: 0.5px;
     margin-bottom: 0.8rem;
 }
@@ -1136,7 +1140,7 @@ a.logo:focus,
 }
 
 .photo-strip .strip-text {
-    padding: 15px 29px 12px 20px;
+    padding: 13px 34px 15px 26px;
     background: rgba(255,255,255, .65);
     display: inline-block;
 }
@@ -1464,7 +1468,7 @@ a.logo:focus,
 .active .inspiration-filter-link:after {
     content: '';
     position: absolute;
-    bottom: -6px;
+    bottom: -8px;
     left: 0;
 
     display: block;
