@@ -176,7 +176,8 @@
         padding: 0 60px;
     }
 
-    .post-thumb .shared-box {
+    .post-thumb .shared-box,
+    .post-thumb .shared-link:focus {
         opacity: 1;
     }
 

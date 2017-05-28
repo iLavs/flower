@@ -931,7 +931,22 @@ a.logo:focus,
     margin-bottom: 1.3rem;
 }
 
-/*.post-thumb .shared-box {*/
+
+.post-thumb .shared-link {
+    opacity: 0;
+
+    -webkit-transition: .35s;
+    transition: .35s ;
+}
+
+.post-thumb:hover  .shared-link {
+    opacity: 1;
+}
+
+.post-thumb  .shared-link:focus {
+    opacity: 1;
+}
+    /*.post-thumb .shared-box {*/
     /*opacity: 0;*/
 
     /*-webkit-transition: .35s;*/
