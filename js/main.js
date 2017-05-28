@@ -108,6 +108,7 @@ function photoStripFunction() {
 
 
             if (ww <= 767) {
+                console.log(photoStrip);
                 photoStrip.destroy(true, true);
 
                 setTimeout(function () {
@@ -115,6 +116,8 @@ function photoStripFunction() {
                 }, 200);
             }
             else {
+                console.log(photoStrip);
+
                 photoStrip.destroy(true, true);
 
                 setTimeout(function () {
@@ -154,8 +157,6 @@ $(document).ready(function () {
         },
     });
 
-    photoStripFunction();
-
     var photosWrap = new Swiper('.photos-wrap', {
         speed: 450,
         nextButton: '.photo-strip-btn.next-btn',
@@ -178,6 +179,8 @@ $(document).ready(function () {
             $('#sliderDesciption').text(slideText);
         }
     });
+
+    photoStripFunction();
 
     togglingSearch();
 
