@@ -471,6 +471,10 @@
 }
 
 @media screen and (max-width: 767px) {
+    .mob-only {
+        display: block !important;
+    }
+
     .btn-rails.mob-only {
         display: inline-block !important;
     }
@@ -805,6 +809,38 @@
 
     .post-info .border-bottom {
         border: none;
+    }
+
+    .photo-strip .shared-box {
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+    }
+
+    .photo-strip .shared-list {
+        padding: 0;
+        margin: 0;
+    }
+
+    .photo-strip .shared-list-item {
+        float: left;
+        padding: 12px 10px;
+        background: rgba(0, 0, 0, .8);
+        width: 56px;
+        height: 52px;
+        overflow: hidden;
+        line-height: 5;
+        margin: 0 20px 0 0;
+        text-align: center;
+    }
+
+    .photo-strip .shared-list-item .icon{
+        font-size: 2rem;
+        display: block;
+        line-height: 1;
+
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
     }
 }
 

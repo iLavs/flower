@@ -58,6 +58,76 @@ function inspirationFiltering() {
     })
 }
 
+
+function photoStripFunction() {
+    var mobSettings = {
+        slidesPerView: 1,
+        shortSwipes: true,
+        longSwipes: true,
+        centeredSlides: true,
+        effect: 'fade',
+        nextButton: '.photo-strip-btn.next-btn',
+        prevButton: '.photo-strip-btn.prev-btn',
+        loop: true
+    };
+
+    var photoStripSettings = {
+        slidesPerView: 'auto',
+        shortSwipes: false,
+        longSwipes: false,
+        simulateTouch: false,
+        freeMode: true,
+        speed: 450,
+        spaceBetween: 0,
+        nextButton: '.photo-strip-btn.next-btn',
+        prevButton: '.photo-strip-btn.prev-btn',
+        loop: true,
+        breakpoints: {
+            1160: {
+                slidesPerView: 'auto',
+                simulateTouch: true,
+                shortSwipes: true,
+                longSwipes: true,
+            }
+        }
+    };
+
+    var photoStripSlides = $('.photo-strip .swiper-slide').clone();
+
+    photoStripSlides.each(function (i) {
+        $('.photo-strip .swiper-wrapper').append(photoStripSlides[i]);
+    });
+
+    var photoStrip = new Swiper('.photo-strip', photoStripSettings);
+
+    $(window).resize(function () {
+        clearTimeout(window.resizedFinished);
+
+        window.resizedFinished = setTimeout(function () {
+            var ww = $(window).width();
+
+
+            if (ww <= 767) {
+                photoStrip.destroy(true, true);
+
+                setTimeout(function () {
+                    photoStrip = new Swiper('.photo-strip', mobSettings);
+                }, 200);
+            }
+            else {
+                photoStrip.destroy(true, true);
+
+                setTimeout(function () {
+                    photoStrip = new Swiper('.photo-strip', photoStripSettings);
+                    photoStrip.setWrapperTranslate('auto');
+                }, 200);
+            }
+        }, 100);
+    });
+
+    $(window).trigger('resize');
+}
+
 function frostedEffect() {
 
 }
@@ -84,68 +154,7 @@ $(document).ready(function () {
         },
     });
 
-    var mobSettings = {
-        slidesPerView: 1,
-        shortSwipes: true,
-        longSwipes: true,
-        centeredSlides: true,
-        effect: 'fade',
-        nextButton: '.photo-strip-btn.next-btn',
-        prevButton: '.photo-strip-btn.prev-btn',
-        loop: true
-    };
-
-
-    var photoStripSettings = {
-        slidesPerView: 'auto',
-        shortSwipes: false,
-        longSwipes: false,
-        simulateTouch: false,
-        speed: 450,
-        spaceBetween: 0,
-        nextButton: '.photo-strip-btn.next-btn',
-        prevButton: '.photo-strip-btn.prev-btn',
-        loop: true,
-        breakpoints: {
-            1160: {
-                slidesPerView: 'auto',
-                simulateTouch: true,
-                shortSwipes: true,
-                longSwipes: true,
-            }
-        }
-    };
-
-    var photoStrip = new Swiper('.photo-strip', photoStripSettings);
-
-    $(window).resize(function () {
-        clearTimeout(window.resizedFinished);
-
-        window.resizedFinished = setTimeout(function () {
-            var ww = $(window).width();
-
-
-            if (ww <= 767) {
-
-                photoStrip.destroy(true, true);
-
-                setTimeout(function () {
-                    photoStrip = new Swiper('.photo-strip', mobSettings);
-                }, 200);
-            }
-            else {
-                photoStrip.destroy(true, true);
-
-                setTimeout(function () {
-                    photoStrip = new Swiper('.photo-strip', photoStripSettings);
-                    photoStrip.setWrapperTranslate('auto');
-                }, 200);
-            }
-        }, 100);
-    });
-
-    $(window).trigger('resize');
-
+    photoStripFunction();
 
     var photosWrap = new Swiper('.photos-wrap', {
         speed: 450,

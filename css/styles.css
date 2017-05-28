@@ -714,6 +714,8 @@ a.logo:focus,
 
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
+
+    z-index: 555;
 }
 
 .slide-panel.active {
@@ -722,12 +724,14 @@ a.logo:focus,
 }
 
 .slide-panel .main-nav,
-.slide-panel .slide-panel-footer {
+.slide-panel .slide-panel-footer,
+.slide-panel.active .close-btn{
     display: none;
 }
 
 .slide-panel.active .main-nav,
-.slide-panel.active .slide-panel-footer {
+.slide-panel.active .slide-panel-footer ,
+.slide-panel.active .close-btn{
     display: block;
 }
 
