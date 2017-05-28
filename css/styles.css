@@ -931,16 +931,16 @@ a.logo:focus,
     margin-bottom: 1.3rem;
 }
 
-.post-thumb .shared-box {
-    opacity: 0;
+/*.post-thumb .shared-box {*/
+    /*opacity: 0;*/
 
-    -webkit-transition: .35s;
-    transition: .35s;
-}
+    /*-webkit-transition: .35s;*/
+    /*transition: .35s;*/
+/*}*/
 
-.post-thumb:hover .shared-box {
-    opacity: 1;
-}
+/*.post-thumb:hover .shared-box {*/
+    /*opacity: 1;*/
+/*}*/
 
 .post-thumb-left .post-thumb {
     float: left;
