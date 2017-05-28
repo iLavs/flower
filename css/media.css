@@ -845,8 +845,8 @@
         background: rgba(0, 0, 0, .7);
     }
 
-    .photo-strip .shared-list-item:focus .shared-link,
-    .photo-strip .shared-list-item:hover .shared-link {
+    .shared-list-item:focus .shared-link,
+    .shared-list-item:hover .shared-link {
         color: #ffffff;
     }
 
