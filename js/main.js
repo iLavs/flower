@@ -84,33 +84,67 @@ $(document).ready(function () {
         },
     });
 
-
-    var photoStrip = new Swiper('.photo-strip', {
-        slidesPerView: 'auto',
+    var mobSettings = {
+        calculateHeight: true,
+        slidesPerView: 1,
+        shortSwipes: true,
+        longSwipes: true,
         centeredSlides: true,
+        effect: 'fade',
+        nextButton: '.photo-strip-btn.next-btn',
+        prevButton: '.photo-strip-btn.prev-btn',
+        loop: true
+    };
+
+
+    var photoStripSettings = {
+        slidesPerView: 'auto',
         shortSwipes: false,
         longSwipes: false,
         simulateTouch: false,
         speed: 450,
-        spaceBetween: -5,
+        spaceBetween: 0,
         nextButton: '.photo-strip-btn.next-btn',
         prevButton: '.photo-strip-btn.prev-btn',
         loop: true,
         breakpoints: {
             1160: {
+                slidesPerView: 'auto',
                 simulateTouch: true,
                 shortSwipes: true,
                 longSwipes: true,
-            },
-            767: {
-                calculateHeight:true,
-                slidesPerView: 1,
-                centeredSlides: false,
-                spaceBetween: 0,
-                effect: 'fade'
             }
         }
+    };
+
+    var photoStrip = new Swiper('.photo-strip', photoStripSettings);
+
+    $(window).resize(function () {
+        clearTimeout(window.resizedFinished);
+
+        window.resizedFinished = setTimeout(function () {
+            var ww = $(window).width();
+
+
+            if (ww <= 767) {
+
+                photoStrip.destroy(true, true);
+
+                setTimeout(function () {
+                    photoStrip = new Swiper('.photo-strip', mobSettings);
+                }, 200);
+            }
+            else {
+                photoStrip.destroy(true, true);
+
+                setTimeout(function () {
+                    photoStrip = new Swiper('.photo-strip', photoStripSettings);
+                    photoStrip.setWrapperTranslate('auto');
+                }, 200);
+            }
+        }, 100);
     });
+
 
     var photosWrap = new Swiper('.photos-wrap', {
         speed: 450,
@@ -119,11 +153,11 @@ $(document).ready(function () {
         loop: true,
         pagination: '.swiper-pagination',
         paginationClickable: true,
-        onSlideChangeStart: function(){
+        onSlideChangeStart: function () {
             var counter = $('slideCounter');
             var index = $('.photos-wrap .swiper-pagination-bullet').index($('.swiper-pagination-bullet-active'));
 
-            $('#activeSlide').html( index + 1 );
+            $('#activeSlide').html(index + 1);
 
             //#Remove all slides index insert if you hadnle it by PHP
             $('#allSlides').html(

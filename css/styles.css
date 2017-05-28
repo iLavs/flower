@@ -1994,7 +1994,10 @@ a.logo:focus,
 
 .tos-desktop .tos-wrapper.tos-fixed.tos-fit.tos-has-close .tos-slide,
 .tos-desktop .tos-wrapper.tos-fixed.tos-fit.tos-has-next .tos-slide,
-.tos-desktop .tos-wrapper.tos-fixed.tos-fit.tos-has-prev .tos-slide {
+.tos-desktop .tos-wrapper.tos-fixed.tos-fit.tos-has-prev .tos-slide,
+.tos-wrapper.tos-fixed.tos-fit.tos-has-close .tos-slide,
+.tos-wrapper.tos-fixed.tos-fit.tos-has-next .tos-slide,
+.tos-wrapper.tos-fixed.tos-fit.tos-has-prev .tos-slide {
     padding: 3.625rem 12.8rem 2.5rem 10.8rem;
     height: auto;
 }
@@ -2009,7 +2012,8 @@ a.logo:focus,
     opacity: 1;
 }
 
-.tos-desktop .tos-wrapper.tos-fixed {
+.tos-desktop .tos-wrapper.tos-fixed,
+.tos-wrapper.tos-fixed{
     background-color: rgba(255, 255, 255, 0.9);
     overflow-y: auto;
     bottom: 0;

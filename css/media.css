@@ -1,3 +1,26 @@
+@media all and (min-width: 2100px) {
+    .container {
+        max-width: 1550px;
+    }
+
+    .main-header .navbar {
+        max-width:1920px;
+        margin: 0 auto;
+    }
+
+    .post-info {
+        font-size: 13px;
+    }
+
+    .article .content-section .container {
+        padding-right: 17.5%;
+    }
+
+    .related-posts .block-heading {
+        font-size: 36px;
+    }
+}
+
 @media all and (max-width: 1600px) {
     html {
         font-size: 14px;
@@ -263,7 +286,7 @@
         font-size: 14px;
     }
 
-    .shared-list{
+    .shared-list {
         padding-left: 15px;
     }
 
@@ -338,6 +361,20 @@
     .related-posts .block-heading {
         margin-bottom: 0;
     }
+
+    .tos-desktop .tos-wrapper.tos-fixed.tos-fit.tos-has-close .tos-slide,
+    .tos-desktop .tos-wrapper.tos-fixed.tos-fit.tos-has-next .tos-slide,
+    .tos-desktop .tos-wrapper.tos-fixed.tos-fit.tos-has-prev .tos-slide,
+    .tos-wrapper.tos-fixed.tos-fit.tos-has-close .tos-slide,
+    .tos-wrapper.tos-fixed.tos-fit.tos-has-next .tos-slide,
+    .tos-wrapper.tos-fixed.tos-fit.tos-has-prev .tos-slide {
+        padding: 3.625rem 6.8rem 2.5rem 5.8rem;
+        height: auto;
+    }
+
+    .tos-close {
+        right: 30px;
+    }
 }
 
 @media screen and (max-width: 980px) {
@@ -363,6 +400,10 @@
 
     .article .side-content.quote {
         font-size: 20px;
+    }
+
+    .inspiration-filter {
+        padding-bottom: 0;
     }
 }
 
@@ -420,7 +461,7 @@
         font-size: 32px;
     }
 
-    .shared-list{
+    .shared-list {
         padding-left: 0;
     }
 
@@ -477,7 +518,7 @@
     }
 
     .search-wrap {
-        max-width:420px;
+        max-width: 420px;
         padding-right: 40px;
     }
 
@@ -490,13 +531,13 @@
         display: none;
     }
 
-    .photo-strip img{
+    .photo-strip img {
         position: absolute;
         top: 25%;
         left: 25%;
 
         display: block;
-        min-height:100%;
+        min-height: 100%;
         min-width: 100%;
         width: auto;
         height: auto;
@@ -505,7 +546,7 @@
         transform: translate(-25%, -25%);
     }
 
-    .next-btn{
+    .next-btn {
         right: 20px;
     }
 
@@ -520,6 +561,7 @@
 
     .content-box {
         padding-bottom: 0;
+        margin: 0;
     }
 
     .lg-posts-box {
@@ -706,7 +748,7 @@
         padding: 25px 0 50px;
     }
 
-    .side-content.slider-description{
+    .side-content.slider-description {
         padding: 0 45px;
         text-align: center;
         margin-bottom: 25px;
@@ -724,7 +766,7 @@
     }
 
     .related-posts .post-thumb .shared-box {
-        display: none!important;
+        display: none !important;
     }
 
     .related-posts .post .post-description .heading {
@@ -732,7 +774,7 @@
         overflow: hidden;
     }
 
-    .related-posts .content-box .post .excerpt ,
+    .related-posts .content-box .post .excerpt,
     .related-posts .content-box .post .btn-rails {
         display: none !important;
     }
@@ -743,7 +785,7 @@
     }
 
     .related-posts .post-info {
-        margin: 0;
+        margin: 0 0 5px;
     }
 
     .post-info .border-bottom {
@@ -792,6 +834,23 @@
         padding: 0;
     }
 
+    .article .content-section .container {
+        padding: 0 20px;
+    }
+
+    .article .main-col p {
+        font-size: 15px;
+    }
+
+    .article .post-info {
+        margin: 1rem 0 35px;
+        text-align: left;
+    }
+
+    .article .article-heading {
+        font-size: 33px;
+    }
+
     .search-wrap {
         margin: 0;
     }
@@ -808,7 +867,7 @@
     }
 
     .slide-panel-footer .footer-section:nth-child(even),
-    .slide-panel-footer .footer-section:nth-child(odd){
+    .slide-panel-footer .footer-section:nth-child(odd) {
         padding: 0;
     }
 
@@ -860,7 +919,7 @@
         width: 25%;
     }
 
-    .filter-result.list-view .cell-img img{
+    .filter-result.list-view .cell-img img {
         width: 100%;
         height: auto;
     }
