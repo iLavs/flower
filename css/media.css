@@ -825,18 +825,20 @@
     .photo-strip .shared-list-item {
         float: left;
         padding: 12px 10px;
-        background: rgba(0, 0, 0, .3);
-        width: 56px;
-        height: 52px;
+        background: rgba(0, 0, 0, .4);
+        width: 57px;
+        height: 53px;
         overflow: hidden;
         line-height: 5;
-        margin: 0 20px 0 0;
+        margin: 0;
         text-align: center;
+        -webkit-transition: .4s;
+        transition: .4s;
     }
 
     .photo-strip .shared-list-item:focus,
     .photo-strip .shared-list-item:hover {
-        background: rgba(0, 0, 0, .6);
+        background: rgba(0, 0, 0, .7);
     }
 
     .photo-strip .shared-list-item .icon{
