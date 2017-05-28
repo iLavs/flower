@@ -725,7 +725,7 @@ a.logo:focus,
 
 .slide-panel .main-nav,
 .slide-panel .slide-panel-footer,
-.slide-panel.active .close-btn{
+.slide-panel .close-btn{
     display: none;
 }
 
