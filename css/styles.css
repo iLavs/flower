@@ -247,6 +247,7 @@ a:hover {
 .custom-select-label {
     display: block;
     padding-left: 10px;
+    letter-spacing: 2px;
 }
 
 .custom-select {
@@ -292,8 +293,9 @@ a:hover {
 .selectric .label {
     border: none;
     font: 1.25rem/2 "URWDINSemiCond-Demi";
-    letter-spacing: 2px;
-    padding: 5px 0;
+    letter-spacing: 3.4px;
+    padding: 10px 0 5px;
+    height: 45px;
 }
 
 .selectric .button:after {
@@ -304,8 +306,8 @@ a:hover {
     content: '';
 
     position: absolute;
-    bottom: 25%;
-    left: 5px;
+    bottom: 5%;
+    right: 3px;
 
     display: block;
     width: 15px;
@@ -1236,7 +1238,7 @@ a.logo:focus,
     display: table;
     width: 100%;
     table-layout: fixed;
-    padding: 4.688rem 7.5rem 1.563rem 6.875rem;
+    padding: 4.8rem 7.5rem 2.3rem 6.875rem;
 }
 
 .filter-bar-col {
@@ -1255,11 +1257,14 @@ a.logo:focus,
 
 .toggler-option {
     float: left;
-    margin: 0 10px;
+    margin: 0 19px;
     color: #b1b1b1;
 
     -webkit-transition: .35s;
     transition: .35s;
+}
+.toggler-option:last-child {
+    margin-right: 0;
 }
 
 .toggler-option.active {
@@ -1271,6 +1276,7 @@ a.logo:focus,
     display: inline-block;
     font: 1rem 'URWDINCond-Demi';
     text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 .toggler-link:hover,
@@ -1300,10 +1306,14 @@ a.logo:focus,
 .list-view .list-row {
     display: table;
     width: 100%;
-    padding: 1rem 7.5rem 1rem 6.875rem;
+    padding: 1.1rem 7.5rem 1.1rem 6.875rem;
     font-size: 1.5rem;
 
     border-bottom: 1px solid #c4c4c4;
+}
+.list-view .list-header.list-row {
+    padding-top: 1.45rem;
+    padding-bottom: 1.35rem;
 }
 
 .filter-result .post-item {
@@ -1318,7 +1328,7 @@ a.logo:focus,
 }
 
 .list-view .cell-img {
-    width: 11%;
+    width: 10.5%;
 }
 
 .list-view .cell-img img {
@@ -1332,6 +1342,11 @@ a.logo:focus,
 
 .list-view .cell-bname {
     width: 19.5%;
+}
+
+.list-view .list-row:not(.list-header) .cell-bname,
+.list-view .list-row:not(.list-header) .cell-season {
+    font-size: 1.25rem;
 }
 
 .list-view .grid-description {
@@ -1414,6 +1429,8 @@ a.logo:focus,
 .grid-description .title {
     font: 1.19rem 'ACaslonPro';
     text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 9px;
 }
 
 .grid-view .post-item img {
