@@ -866,6 +866,16 @@
     .post-thumb .shared-box {
         bottom: 0;
     }
+
+    .article .video-block, .video-gif {
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .video-backdrop {
+        display: none;
+    }
     
     .video-popup {
         position: fixed;
