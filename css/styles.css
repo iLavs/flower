@@ -1194,6 +1194,8 @@ a.logo:focus,
     text-align: center;
     letter-spacing: 2px;
     margin-top: 8px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 /*-------------------------------------ADS BLOCK---------------------------------------*/
