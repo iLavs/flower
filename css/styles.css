@@ -662,6 +662,7 @@ a:hover {
     color: #171717;
     width: 264px;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 a.logo:focus,

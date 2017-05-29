@@ -66,6 +66,11 @@ function articleSlider() {
             caption: {
                 add: true
             },
+            buttons: {
+                prev: true,
+                next: true,
+                close: true
+            }
         });
 
         var photosWrap = new Swiper('.photos-wrap', {
