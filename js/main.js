@@ -145,7 +145,6 @@ function photoStripFunction() {
                     photoStrip.destroy(true, true);
 
                     setTimeout(function () {
-                        console.log(photoStrip);
                         photoStrip = new Swiper('.photo-strip', mobSettings);
                     }, 200);
                 }

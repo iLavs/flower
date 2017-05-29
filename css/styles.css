@@ -970,6 +970,10 @@ a.logo:focus,
     padding-bottom: 5px;
 }
 
+.post .post-info {
+    margin-bottom: 1.8em;
+}
+
 .post-info .days:after {
     content: '•';
     display: inline-block;
