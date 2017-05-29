@@ -331,6 +331,10 @@
         width: 33.3%;
     }
 
+    .article .post-info {
+        font-size: 11px;
+    }
+
     .article .article-heading {
         font-size: 36px;
     }
@@ -622,6 +626,7 @@
 
     .article .post-info {
         margin: 1rem 0 35px;
+        font-size: 9px;
         text-align: left;
     }
 
