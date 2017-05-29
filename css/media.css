@@ -384,6 +384,19 @@
     .tos-close {
         right: 30px;
     }
+
+    .tos-next:before,
+    .tos-prev:after {
+        display: none !important;
+    }
+
+    .tos-wrapper .tos-caption {
+        width: 80%;
+    }
+
+    .tos-caption > div {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 980px) {
@@ -962,6 +975,22 @@
     .play-btn {
         width: 80px;
         height: 80px;
+    }
+
+    .tos-close {
+        top: 30px;
+        right: 30px;
+        height: 25px;
+        width: 25px;
+    }
+
+    .tos-desktop .tos-wrapper.tos-fixed.tos-fit.tos-has-close .tos-slide,
+    .tos-desktop .tos-wrapper.tos-fixed.tos-fit.tos-has-next .tos-slide,
+    .tos-desktop .tos-wrapper.tos-fixed.tos-fit.tos-has-prev .tos-slide,
+    .tos-wrapper.tos-fixed.tos-fit.tos-has-close .tos-slide,
+    .tos-wrapper.tos-fixed.tos-fit.tos-has-next .tos-slide,
+    .tos-wrapper.tos-fixed.tos-fit.tos-has-prev .tos-slide {
+        padding: 80px 0 25px;
     }
 }
 
