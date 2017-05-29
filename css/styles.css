@@ -1631,7 +1631,10 @@ a.logo:focus,
 }
 
 .article .post-info {
+    font-size: 13px;
+    letter-spacing: 1.5px;
     margin: 1rem 0 0;
+    color: #515151;
 }
 
 .article .side-content {

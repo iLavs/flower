@@ -493,6 +493,7 @@
 
     .logo {
         font-size: 17px;
+        letter-spacing: 3px;
         width: auto;
         text-align: center;
     }
@@ -974,6 +975,36 @@
     .detailed-article .sub-heading {
         font-size: 20px;
     }
+
+    .filter-result.list-view .list-header {
+        display: none !important;
+    }
+
+    .toggler-option {
+        margin: 0 8px;
+    }
+
+    .filter-result.list-view .d-cell,
+    .list-view .list-row:not(.list-header) .cell-bname,
+    .list-view .list-row:not(.list-header) .cell-season{
+        display: block;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .filter-result.list-view .cell-img {
+        float: left;
+        width: 25%;
+    }
+
+    .filter-result.list-view .cell-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .list-view .list-row {
+        padding: 1rem 1.5rem 1rem 1.5rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1042,34 +1073,6 @@
         font: 1rem/3 "URWDINSemiCond-Demi";
     }
 
-    .filter-result.list-view .list-header {
-        display: none !important;
-    }
-
-    .toggler-option {
-        margin: 0 8px;
-    }
-
-    .filter-result.list-view .d-cell {
-        display: block;
-        width: 100%;
-        font-size: 16px;
-    }
-
-    .filter-result.list-view .cell-img {
-        float: left;
-        width: 25%;
-    }
-
-    .filter-result.list-view .cell-img img {
-        width: 100%;
-        height: auto;
-    }
-
-    .list-view .list-row {
-        padding: 1rem 1.5rem 1rem 1.5rem;
-    }
-
     .detailed-article .main-col {
         padding-right: 15px;
     }
@@ -1123,7 +1126,9 @@
         font-size: 1.75em;
     }
 
-    .filter-result.list-view .d-cell {
+    .filter-result.list-view .d-cell,
+    .list-view .list-row:not(.list-header) .cell-bname,
+    .list-view .list-row:not(.list-header) .cell-season{
         font-size: 14px;
     }
 
